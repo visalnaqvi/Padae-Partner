@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "slug": "sample-post",
+  "seo": {
+    "title": "Sample Blog Post",
+    "description": "Sample description"
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "title": "Sample Blog Post",
+      "subtitle": "Example subtitle"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is a paragraph."
+    },
+    {
+      "type": "heading",
+      "content": "Important Section"
+    },
+    {
+      "type": "image",
+      "src": "/images/example.jpg",
+      "alt": "Example Image"
+    },
+    {
+      "type": "table",
+      "headers": ["Column 1", "Column 2"],
+      "rows": [["Value 1", "Value 2"]]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Question?",
+          "answer": "Answer."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Apply Now",
+      "buttonText": "Contact Us",
+      "buttonUrl": "/contact"
+    },
+    {
+      "type": "lead_form"
+    }
+  ]
+}

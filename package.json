@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^21.1.1",
+    "antd": "^6.4.3",
     "next": "15.1.7",
     "openai": "^4.85.3",
     "react": "^19.0.0",
