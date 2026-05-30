@@ -1,12 +1,14 @@
 "use client";
 
 import { useId, useState } from "react";
+import OfferTimer from "./OfferTimer";
 
 export default function LeadForm({
-  title = "Get Free Counseling",
-  description = "Share your details and our CUET counselor will call you shortly.",
-  cta = "Get Free Counseling",
+  title = "Book Your Seat for ₹500",
+  description = "Share your details and reserve your CUET UG preparation seat at the current booking price.",
+  cta = "Book Seat Now for ₹500",
   compact = false,
+  showOffer = true,
 }) {
   const formId = useId();
   const [submitted, setSubmitted] = useState(false);
@@ -19,10 +21,12 @@ export default function LeadForm({
   return (
     <form className={`lp-lead-form ${compact ? "lp-lead-form-compact" : ""}`} onSubmit={handleSubmit}>
       <div className="lp-form-copy">
-        <span className="lp-eyebrow">Free counseling call</span>
+        <span className="lp-eyebrow">Limited seat offer</span>
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
+
+      {showOffer ? <OfferTimer compact /> : null}
 
       <div className="lp-form-grid">
         <label htmlFor={`${formId}-name`}>
@@ -68,8 +72,8 @@ export default function LeadForm({
       </div>
 
       <button className="lp-primary-btn" type="submit">{cta}</button>
-      <p className="lp-form-note">No spam. A counselor will contact you for admission planning.</p>
-      {submitted ? <p className="lp-success-msg">Thank you. Your counseling request has been received.</p> : null}
+      <p className="lp-form-note">No spam. A counselor will contact you to confirm seat availability and payment details.</p>
+      {submitted ? <p className="lp-success-msg">Thank you. Your seat booking request has been received.</p> : null}
     </form>
   );
 }

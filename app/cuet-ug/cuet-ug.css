@@ -32,22 +32,61 @@ body:has(.cuet-landing) .footer {
 }
 
 .lp-hero {
+  background:
+    radial-gradient(circle at 14% 18%, #fff3d0 0, #fff3d000 30%),
+    radial-gradient(circle at 82% 12%, #c9f1e1 0, #c9f1e100 28%),
+    linear-gradient(135deg, #ffffff 0%, #f1fbf7 48%, #fff0df 100%);
+  border-bottom: 1px solid #d8e7e1;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 28px;
+  overflow: hidden;
   padding: 32px 18px 44px;
+  position: relative;
+}
+
+.lp-hero::before {
+  background:
+    linear-gradient(90deg, #2f7d6214 1px, transparent 1px),
+    linear-gradient(180deg, #2f7d6214 1px, transparent 1px);
+  background-size: 46px 46px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(120deg, #000 0%, transparent 72%);
+  pointer-events: none;
+  position: absolute;
+}
+
+.lp-hero::after {
+  background: linear-gradient(135deg, #d8422f, #ef9b2d);
+  border-radius: 999px;
+  box-shadow: 0 24px 80px #d8422f2b;
+  content: "";
+  height: 180px;
+  opacity: 0.22;
+  position: absolute;
+  right: -70px;
+  top: 42px;
+  width: 180px;
 }
 
 .lp-hero-copy {
   align-self: center;
+  position: relative;
+  z-index: 1;
 }
 
 .lp-eyebrow {
-  color: var(--lp-accent);
+  background: #ffffffcc;
+  border: 1px solid #f2d8bf;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px #10212b0d;
+  color: #b83224;
   display: inline-flex;
   font-size: 13px;
   font-weight: 900;
   margin-bottom: 12px;
+  padding: 8px 12px;
   text-transform: uppercase;
 }
 
@@ -57,6 +96,14 @@ body:has(.cuet-landing) .footer {
   line-height: 0.98;
   margin-bottom: 18px;
   max-width: 880px;
+}
+
+.lp-title-highlight {
+  background: linear-gradient(90deg, var(--lp-accent) 0%, var(--lp-accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
 }
 
 .lp-hero-copy > p {
@@ -86,6 +133,190 @@ body:has(.cuet-landing) .footer {
   padding: 10px 12px;
 }
 
+.lp-hero-points span {
+  align-items: center;
+  background: #fffffff0;
+  border-color: #cfe2db;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.lp-hero-points svg {
+  color: var(--lp-green);
+  flex: 0 0 auto;
+  font-size: 17px;
+}
+
+.lp-hero-cta {
+  margin-top: 18px;
+  width: fit-content;
+}
+
+.lp-offer-timer {
+  background:
+    linear-gradient(135deg, #ffffff 0%, #fff8ed 54%, #fff1df 100%);
+  border: 1px solid #efb485;
+  border-radius: 8px;
+  box-shadow: 0 20px 46px #d8422f24, 0 0 0 4px #ffffff8f;
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  max-width: 560px;
+  overflow: hidden;
+  padding: 16px;
+  position: relative;
+}
+
+.lp-offer-timer::before {
+  background: linear-gradient(180deg, var(--lp-accent), var(--lp-accent-2));
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: 5px;
+}
+
+.lp-offer-timer-compact {
+  background: #fff8ef;
+  box-shadow: none;
+  margin-top: 0;
+  max-width: none;
+}
+
+.lp-offer-top {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.lp-offer-icon {
+  align-items: center;
+  background: linear-gradient(135deg, var(--lp-accent), var(--lp-accent-2));
+  border-radius: 8px;
+  color: #ffffff;
+  display: inline-flex;
+  flex: 0 0 42px;
+  font-size: 20px;
+  height: 42px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.lp-offer-copy {
+  min-width: 0;
+}
+
+.lp-offer-icon svg {
+  animation: lpTimerTick 1s steps(2, end) infinite;
+  transform-origin: center;
+}
+
+.lp-offer-label {
+  align-items: center;
+  color: #9f2f22;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 950;
+  gap: 7px;
+  letter-spacing: 0;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.lp-offer-pulse {
+  background: #d8422f;
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 #d8422f66;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  animation: lpOfferPulse 1.35s ease-out infinite;
+}
+
+.lp-offer-timer strong {
+  color: var(--lp-deep);
+  display: block;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.lp-countdown {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.lp-countdown-unit {
+  background: #0c2730;
+  border: 1px solid #284852;
+  border-radius: 8px;
+  box-shadow: inset 0 -12px 20px #00000024, 0 12px 22px #10212b1d;
+  color: #ffffff;
+  display: grid;
+  min-width: 72px;
+  padding: 8px 10px 7px;
+  text-align: center;
+}
+
+.lp-countdown-number {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(30px, 8vw, 40px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 950;
+  line-height: 0.95;
+}
+
+.lp-countdown-label {
+  color: #ffd9b0;
+  font-size: 10px;
+  font-weight: 900;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.lp-countdown-separator {
+  color: var(--lp-accent);
+  font-size: 32px;
+  font-weight: 950;
+  line-height: 1;
+  transform: translateY(-7px);
+}
+
+.lp-offer-timer p {
+  color: #4b5d64;
+  font-size: 14px;
+  line-height: 1.45;
+  margin-top: 8px;
+}
+
+@keyframes lpOfferPulse {
+  70% {
+    box-shadow: 0 0 0 9px #d8422f00;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 #d8422f00;
+  }
+}
+
+@keyframes lpTimerTick {
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-offer-icon svg,
+  .lp-offer-pulse {
+    animation: none;
+  }
+}
+
 .lp-lead-form {
   background: var(--lp-surface);
   border: 1px solid var(--lp-line);
@@ -94,6 +325,13 @@ body:has(.cuet-landing) .footer {
   display: grid;
   gap: 18px;
   padding: 22px;
+}
+
+.lp-hero > .lp-lead-form {
+  border-color: #ffffff;
+  box-shadow: 0 28px 80px #10212b24, 0 0 0 8px #ffffff52;
+  position: relative;
+  z-index: 1;
 }
 
 .lp-form-copy h2 {
@@ -236,6 +474,20 @@ body:has(.cuet-landing) .footer {
   padding: 22px;
 }
 
+.lp-card-icon {
+  align-items: center;
+  background: #eaf6ef;
+  border: 1px solid #bfe2cd;
+  border-radius: 8px;
+  color: var(--lp-green);
+  display: inline-flex;
+  font-size: 24px;
+  height: 46px;
+  justify-content: center;
+  margin-bottom: 18px;
+  width: 46px;
+}
+
 .lp-card-tag {
   color: var(--lp-accent);
   display: block;
@@ -271,10 +523,14 @@ body:has(.cuet-landing) .footer {
   color: var(--lp-green);
   display: inline-flex;
   flex: 0 0 34px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 900;
   height: 34px;
   justify-content: center;
+}
+
+.lp-check svg {
+  display: block;
 }
 
 .lp-soft-band {
@@ -572,6 +828,10 @@ body:has(.cuet-landing) .footer {
 @media (max-width: 420px) {
   .lp-primary-btn,
   .lp-secondary-btn {
+    width: 100%;
+  }
+
+  .lp-hero-cta {
     width: 100%;
   }
 

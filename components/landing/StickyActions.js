@@ -1,6 +1,6 @@
 export default function StickyActions() {
   const phone = "+919999999999";
-  const whatsappText = encodeURIComponent("Hi, I want free counseling for CUET UG 2027 preparation.");
+  const whatsappText = encodeURIComponent("Hi, I want to book my CUET UG 2027 seat for ₹500.");
 
   return (
     <>
@@ -13,7 +13,7 @@ export default function StickyActions() {
         </a>
       </div>
       <a className="lp-mobile-cta" href="#lead-form">
-        Get Free Counseling
+        Book Seat Now for ₹500
       </a>
     </>
   );

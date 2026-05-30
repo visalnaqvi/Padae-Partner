@@ -2,19 +2,21 @@ import LeadForm from "@/components/landing/LeadForm";
 import SectionHeader from "@/components/landing/SectionHeader";
 import { FeatureCard, InfoCard } from "@/components/landing/CardGrid";
 import FAQAccordion from "@/components/landing/FAQAccordion";
+import HeroPointList from "@/components/landing/HeroPointList";
+import OfferTimer from "@/components/landing/OfferTimer";
 import PlaceholderImage from "@/components/landing/PlaceholderImage";
 import StickyActions from "@/components/landing/StickyActions";
 import "./cuet-ug.css";
 
 export function generateMetadata() {
   return {
-    title: "CUET UG 2027 Coaching Program | Free Counseling",
+    title: "CUET UG 2027 Coaching Program | Book Seat for ₹500",
     description:
-      "Join a conversion-focused CUET UG 2027 preparation program with live classes, mock tests, study material, doubt sessions, and admission counseling for top universities.",
+      "Book your CUET UG 2027 preparation seat for ₹500 with live classes, mock tests, study material, doubt sessions, and admission counseling for top universities.",
     openGraph: {
       title: "CUET UG 2027 Preparation Program",
       description:
-        "Expert CUET UG coaching with live classes, mock tests, PYQs, performance tracking, and free admission counseling.",
+        "Expert CUET UG coaching with live classes, mock tests, PYQs, performance tracking, and seat booking at ₹500.",
       url: "/cuet-ug",
       siteName: "Padae Partner",
       type: "website",
@@ -23,49 +25,49 @@ export function generateMetadata() {
       card: "summary_large_image",
       title: "CUET UG 2027 Coaching Program",
       description:
-        "Get expert guidance, mock tests, study material, and admission counseling for CUET UG 2027.",
+        "Book your CUET UG 2027 preparation seat for ₹500 and get expert guidance, mock tests, and admission counseling.",
     },
   };
 }
 
 const heroPoints = [
-  "Live Classes",
-  "Mock Tests",
-  "Doubt Sessions",
-  "Previous Year Questions",
-  "College Admission Guidance",
+  ["Live Classes", "play"],
+  ["Mock Tests", "check"],
+  ["Doubt Sessions", "message"],
+  ["Previous Year Questions", "book"],
+  ["College Admission Guidance", "bank"],
 ];
 
 const trustCards = [
-  ["Experienced Faculty", "Learn from mentors who understand CUET patterns, board overlap, and university admission strategy."],
-  ["Structured Study Plan", "Follow a weekly plan designed to cover concepts, revision, tests, and counseling milestones."],
-  ["Regular Testing", "Measure readiness with topic tests, full-length mocks, and exam-style practice."],
-  ["Personalized Guidance", "Get help choosing subjects, target courses, and university preferences."],
+  ["Experienced Faculty", "Learn from mentors who understand CUET patterns, board overlap, and university admission strategy.", "team"],
+  ["Structured Study Plan", "Follow a weekly plan designed to cover concepts, revision, tests, and counseling milestones.", "calendar"],
+  ["Regular Testing", "Measure readiness with topic tests, full-length mocks, and exam-style practice.", "fileSearch"],
+  ["Personalized Guidance", "Get help choosing subjects, target courses, and university preferences.", "solution"],
 ];
 
 const whyMatters = [
-  ["Competition is increasing", "More students are targeting CUET every year, making early preparation and test familiarity important."],
-  ["Top universities admit through CUET", "CUET scores are a key pathway for Delhi University, BHU, JMI, AMU, and other leading universities."],
-  ["Preparation improves chances", "A guided plan helps students avoid random study, identify weak areas, and improve admission options."],
+  ["Competition is increasing", "More students are targeting CUET every year, making early preparation and test familiarity important.", "barChart"],
+  ["Top universities admit through CUET", "CUET scores are a key pathway for Delhi University, BHU, JMI, AMU, and other leading universities.", "bank"],
+  ["Preparation improves chances", "A guided plan helps students avoid random study, identify weak areas, and improve admission options.", "trophy"],
 ];
 
 const benefits = [
-  ["Expert Mentors", "Subject experts simplify concepts and keep preparation focused on CUET requirements."],
-  ["Weekly Mock Tests", "Frequent practice builds speed, accuracy, and confidence before the real exam."],
-  ["Performance Tracking", "Reports show strengths, weak topics, and the next actions to improve scores."],
-  ["Doubt Solving", "Dedicated doubt support helps students stay consistent instead of getting stuck."],
-  ["Admission Counseling", "Counselors guide course selection, university targeting, and preference planning."],
-  ["Study Material", "Access concise notes, PYQs, topic worksheets, and revision resources."],
+  ["Expert Mentors", "Subject experts simplify concepts and keep preparation focused on CUET requirements.", "team"],
+  ["Weekly Mock Tests", "Frequent practice builds speed, accuracy, and confidence before the real exam.", "fileSearch"],
+  ["Performance Tracking", "Reports show strengths, weak topics, and the next actions to improve scores.", "barChart"],
+  ["Doubt Solving", "Dedicated doubt support helps students stay consistent instead of getting stuck.", "message"],
+  ["Admission Counseling", "Counselors guide course selection, university targeting, and preference planning.", "solution"],
+  ["Study Material", "Access concise notes, PYQs, topic worksheets, and revision resources.", "book"],
 ];
 
 const features = [
-  ["Live Interactive Classes", "Attend concept-first CUET classes with active practice and exam discussion."],
-  ["Recorded Sessions", "Revise missed or difficult topics anytime with organized class recordings."],
-  ["Topic Wise Tests", "Practice after every unit to strengthen accuracy before moving ahead."],
-  ["Full Length Mock Tests", "Experience real exam timing, section strategy, and pressure management."],
-  ["Previous Year Questions", "Understand repeated concepts and the style of CUET UG questions."],
-  ["Performance Reports", "Track score trends, attempted questions, accuracy, and improvement areas."],
-  ["Counseling Support", "Get admission guidance from preparation through university preference filling."],
+  ["Live Interactive Classes", "Attend concept-first CUET classes with active practice and exam discussion.", "play"],
+  ["Recorded Sessions", "Revise missed or difficult topics anytime with organized class recordings.", "read"],
+  ["Topic Wise Tests", "Practice after every unit to strengthen accuracy before moving ahead.", "check"],
+  ["Full Length Mock Tests", "Experience real exam timing, section strategy, and pressure management.", "fileSearch"],
+  ["Previous Year Questions", "Understand repeated concepts and the style of CUET UG questions.", "book"],
+  ["Performance Reports", "Track score trends, attempted questions, accuracy, and improvement areas.", "barChart"],
+  ["Counseling Support", "Get admission guidance from preparation through university preference filling.", "solution"],
 ];
 
 const universities = ["Delhi University", "BHU", "JMI", "AMU", "Other Top Universities"];
@@ -103,7 +105,7 @@ const faqs = [
   ["Is study material included?", "Yes. Students receive notes, practice sheets, planners, and important topic resources."],
   ["How are doubts solved?", "Doubts are handled through dedicated sessions and mentor support."],
   ["Do you track my performance?", "Yes. Performance reports highlight accuracy, weak topics, and score improvement."],
-  ["How do I book free counseling?", "Submit any form on this page or use the WhatsApp and call buttons for quick help."],
+  ["How do I book my seat?", "Submit any form on this page or use the WhatsApp and call buttons for quick help. The current booking offer is ₹500."],
 ];
 
 export default function CuetUgLandingPage() {
@@ -113,15 +115,16 @@ export default function CuetUgLandingPage() {
       <section className="lp-hero" id="lead-form">
         <div className="lp-hero-copy">
           <span className="lp-eyebrow">Admissions-focused CUET coaching</span>
-          <h1>CUET UG 2027 Preparation Program</h1>
+          <h1>
+            <span className="lp-title-highlight">CUET UG 2027</span> Preparation Program
+          </h1>
           <p>
             Get Expert Guidance, Mock Tests, Study Material and Admission Counseling for Top Universities
           </p>
-          <div className="lp-hero-points">
-            {heroPoints.map((point) => (
-              <span key={point}>{point}</span>
-            ))}
-          </div>
+          <HeroPointList points={heroPoints} />
+          <a className="lp-primary-btn lp-hero-cta" href="#lead-form">
+            Book Seat Now for ₹500
+          </a>
         </div>
         <LeadForm />
       </section>
@@ -129,8 +132,8 @@ export default function CuetUgLandingPage() {
       {/* TRUST: Credibility signals placed early to reduce form hesitation. */}
       <section className="lp-section lp-trust-section">
         <div className="lp-trust-grid">
-          {trustCards.map(([title, description]) => (
-            <InfoCard key={title} title={title} description={description} />
+          {trustCards.map(([title, description, icon]) => (
+            <InfoCard key={title} title={title} description={description} icon={icon} />
           ))}
         </div>
       </section>
@@ -143,8 +146,8 @@ export default function CuetUgLandingPage() {
           description="Students need more than syllabus coverage. They need exam practice, preference planning, and a preparation rhythm that keeps them moving."
         />
         <div className="lp-card-grid lp-three">
-          {whyMatters.map(([title, description], index) => (
-            <InfoCard key={title} title={title} description={description} tag={`0${index + 1}`} />
+          {whyMatters.map(([title, description, icon], index) => (
+            <InfoCard key={title} title={title} description={description} icon={icon} tag={`0${index + 1}`} />
           ))}
         </div>
       </section>
@@ -153,8 +156,8 @@ export default function CuetUgLandingPage() {
       <section className="lp-section lp-soft-band">
         <SectionHeader eyebrow="Why choose us" title="Everything students need to prepare with direction." center />
         <div className="lp-feature-grid">
-          {benefits.map(([title, description]) => (
-            <FeatureCard key={title} title={title} description={description} />
+          {benefits.map(([title, description, icon]) => (
+            <FeatureCard key={title} title={title} description={description} icon={icon} />
           ))}
         </div>
       </section>
@@ -167,8 +170,8 @@ export default function CuetUgLandingPage() {
           description="From live classes to admission counseling, the program is built to support both score improvement and university planning."
         />
         <div className="lp-feature-grid lp-feature-grid-wide">
-          {features.map(([title, description]) => (
-            <FeatureCard key={title} title={title} description={description} />
+          {features.map(([title, description, icon]) => (
+            <FeatureCard key={title} title={title} description={description} icon={icon} />
           ))}
         </div>
       </section>
@@ -218,7 +221,7 @@ export default function CuetUgLandingPage() {
         <LeadForm
           title="Download Free Kit"
           description="Enter your details to receive the CUET syllabus, planner, important topics, and sample mock test."
-          cta="Download Free Kit"
+          cta="Book Seat Now for ₹500"
           compact
         />
       </section>
@@ -252,7 +255,7 @@ export default function CuetUgLandingPage() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <a className="lp-secondary-btn" href="#lead-form">Request pricing</a>
+              <a className="lp-secondary-btn" href="#lead-form">Book Seat Now for ₹500</a>
             </article>
           ))}
         </div>
@@ -267,14 +270,14 @@ export default function CuetUgLandingPage() {
       {/* FINAL CTA: Last strong conversion point with a complete lead form. */}
       <section className="lp-section lp-final-cta">
         <div>
-          <span className="lp-eyebrow">Start with a free call</span>
+          <span className="lp-eyebrow">Limited seat offer</span>
           <h2>Ready to Start Your CUET UG Preparation?</h2>
-          <p>Book a counseling call and get a clear plan for subjects, mock tests, and target universities.</p>
+          <p>Book your seat for ₹500 and get a clear plan for subjects, mock tests, and target universities.</p>
         </div>
         <LeadForm
-          title="Book Free Counseling"
-          description="A counselor will help you understand the right CUET UG preparation path."
-          cta="Book Free Counseling"
+          title="Book Your Seat for ₹500"
+          description="A counselor will confirm seat availability and help you understand the right CUET UG preparation path."
+          cta="Book Seat Now for ₹500"
           compact
         />
       </section>
