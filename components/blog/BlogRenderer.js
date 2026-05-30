@@ -1,3 +1,5 @@
+"use client";
+
 import CTAButton from "./CTAButton";
 import FAQBlock from "./FAQBlock";
 import Heading from "./Heading";
