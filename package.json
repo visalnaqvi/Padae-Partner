@@ -11,10 +11,10 @@
   "dependencies": {
     "@octokit/rest": "^21.1.1",
     "antd": "^6.4.3",
-    "next": "15.1.7",
+    "next": "^16.2.6",
     "openai": "^4.85.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@types/node": "^20",
