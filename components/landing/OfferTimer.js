@@ -3,24 +3,42 @@
 import { useEffect, useMemo, useState } from "react";
 import LandingIcon from "./LandingIcon";
 
-const OFFER_SECONDS = 20 * 60;
+export function getBatchClosingDetails(now = new Date()) {
+  const closingDate = new Date(now);
+  const daysUntilFriday = (5 - now.getDay() + 7) % 7;
 
-function formatTime(totalSeconds) {
-  const minutes = Math.floor(totalSeconds / 60).toString().padStart(2, "0");
-  const seconds = (totalSeconds % 60).toString().padStart(2, "0");
+  closingDate.setDate(now.getDate() + daysUntilFriday);
+  closingDate.setHours(23, 59, 59, 999);
 
-  return { minutes, seconds };
+  const seatsLeft = Math.max(1, 31 - now.getDate());
+  const totalMs = Math.max(closingDate.getTime() - now.getTime(), 0);
+  const totalMinutes = Math.ceil(totalMs / 60000);
+  const days = Math.floor(totalMinutes / 1440);
+  const hours = Math.floor((totalMinutes % 1440) / 60);
+  const minutes = totalMinutes % 60;
+
+  return {
+    seatsLeft,
+    closingDateLabel: closingDate.toLocaleDateString("en-IN", {
+      weekday: "long",
+      day: "numeric",
+      month: "short",
+    }),
+    days: days.toString().padStart(2, "0"),
+    hours: hours.toString().padStart(2, "0"),
+    minutes: minutes.toString().padStart(2, "0"),
+    expired: totalMinutes <= 0,
+  };
 }
 
 export default function OfferTimer({ compact = false }) {
-  const [secondsLeft, setSecondsLeft] = useState(OFFER_SECONDS);
-  const expired = secondsLeft <= 0;
-  const timeLabel = useMemo(() => formatTime(Math.max(secondsLeft, 0)), [secondsLeft]);
+  const [now, setNow] = useState(() => new Date());
+  const details = useMemo(() => getBatchClosingDetails(now), [now]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setSecondsLeft((current) => Math.max(current - 1, 0));
-    }, 1000);
+      setNow(new Date());
+    }, 30000);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -34,26 +52,34 @@ export default function OfferTimer({ compact = false }) {
         <div className="lp-offer-copy">
           <span className="lp-offer-label">
             <span aria-hidden="true" className="lp-offer-pulse" />
-            Limited seat booking offer
+            Batch closing countdown
           </span>
-          <strong>{expired ? "Booking fee is now ₹2,000" : "₹500 offer ends soon"}</strong>
+          <strong>{details.expired ? "Batch closing time reached" : `Closes on ${details.closingDateLabel}`}</strong>
         </div>
       </div>
       <div className="lp-offer-bottom">
-        {!expired ? (
-          <div className="lp-countdown" aria-label={`${timeLabel.minutes} minutes and ${timeLabel.seconds} seconds remaining`}>
+        {!details.expired ? (
+          <div
+            className="lp-countdown"
+            aria-label={`${details.days} days, ${details.hours} hours and ${details.minutes} minutes remaining`}
+          >
             <span className="lp-countdown-unit">
-              <span className="lp-countdown-number">{timeLabel.minutes}</span>
-              <span className="lp-countdown-label">Min</span>
+              <span className="lp-countdown-number">{details.days}</span>
+              <span className="lp-countdown-label">Days</span>
             </span>
             <span className="lp-countdown-separator" aria-hidden="true">:</span>
             <span className="lp-countdown-unit">
-              <span className="lp-countdown-number">{timeLabel.seconds}</span>
-              <span className="lp-countdown-label">Sec</span>
+              <span className="lp-countdown-number">{details.hours}</span>
+              <span className="lp-countdown-label">Hours</span>
+            </span>
+            <span className="lp-countdown-separator" aria-hidden="true">:</span>
+            <span className="lp-countdown-unit">
+              <span className="lp-countdown-number">{details.minutes}</span>
+              <span className="lp-countdown-label">Min</span>
             </span>
           </div>
         ) : null}
-        <p>{expired ? "Submit the form to request current availability." : "After this timer, seat booking becomes ₹2,000."}</p>
+        <p>{details.expired ? "Submit the form to request current availability." : `${details.seatsLeft} seats are currently left for this batch.`}</p>
       </div>
     </div>
   );

@@ -4,9 +4,9 @@ import { useId, useState } from "react";
 import OfferTimer from "./OfferTimer";
 
 export default function LeadForm({
-  title = "Book Your Seat for ₹500",
-  description = "Share your details and reserve your CUET UG preparation seat at the current booking price.",
-  cta = "Book Seat Now for ₹500",
+  title = "Book Your Seat Now",
+  description = "Share your details and reserve your CUET UG preparation seat before the current batch closes.",
+  cta = "Book Your Seat Now",
   compact = false,
   showOffer = true,
 }) {
@@ -21,7 +21,7 @@ export default function LeadForm({
   return (
     <form className={`lp-lead-form ${compact ? "lp-lead-form-compact" : ""}`} onSubmit={handleSubmit}>
       <div className="lp-form-copy">
-        <span className="lp-eyebrow">Limited seat offer</span>
+        <span className="lp-eyebrow">Limited seats</span>
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
@@ -72,7 +72,7 @@ export default function LeadForm({
       </div>
 
       <button className="lp-primary-btn" type="submit">{cta}</button>
-      <p className="lp-form-note">No spam. A counselor will contact you to confirm seat availability and payment details.</p>
+      <p className="lp-form-note">No spam. A counselor will contact you to confirm seat availability and next steps.</p>
       {submitted ? <p className="lp-success-msg">Thank you. Your seat booking request has been received.</p> : null}
     </form>
   );

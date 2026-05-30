@@ -1,22 +1,22 @@
 import LeadForm from "@/components/landing/LeadForm";
 import SectionHeader from "@/components/landing/SectionHeader";
 import { FeatureCard, InfoCard } from "@/components/landing/CardGrid";
+import BatchClosingGraphic from "@/components/landing/BatchClosingGraphic";
 import FAQAccordion from "@/components/landing/FAQAccordion";
 import HeroPointList from "@/components/landing/HeroPointList";
-import OfferTimer from "@/components/landing/OfferTimer";
 import PlaceholderImage from "@/components/landing/PlaceholderImage";
 import StickyActions from "@/components/landing/StickyActions";
 import "./cuet-ug.css";
 
 export function generateMetadata() {
   return {
-    title: "CUET UG 2027 Coaching Program | Book Seat for ₹500",
+    title: "CUET UG 2027 Coaching Program | Book Your Seat",
     description:
-      "Book your CUET UG 2027 preparation seat for ₹500 with live classes, mock tests, study material, doubt sessions, and admission counseling for top universities.",
+      "Book your CUET UG 2027 preparation seat with live classes, mock tests, study material, doubt sessions, and admission counseling for top universities.",
     openGraph: {
       title: "CUET UG 2027 Preparation Program",
       description:
-        "Expert CUET UG coaching with live classes, mock tests, PYQs, performance tracking, and seat booking at ₹500.",
+        "Expert CUET UG coaching with live classes, mock tests, PYQs, performance tracking, and limited seat booking.",
       url: "/cuet-ug",
       siteName: "Padae Partner",
       type: "website",
@@ -25,7 +25,7 @@ export function generateMetadata() {
       card: "summary_large_image",
       title: "CUET UG 2027 Coaching Program",
       description:
-        "Book your CUET UG 2027 preparation seat for ₹500 and get expert guidance, mock tests, and admission counseling.",
+        "Book your CUET UG 2027 preparation seat and get expert guidance, mock tests, and admission counseling.",
     },
   };
 }
@@ -105,7 +105,7 @@ const faqs = [
   ["Is study material included?", "Yes. Students receive notes, practice sheets, planners, and important topic resources."],
   ["How are doubts solved?", "Doubts are handled through dedicated sessions and mentor support."],
   ["Do you track my performance?", "Yes. Performance reports highlight accuracy, weak topics, and score improvement."],
-  ["How do I book my seat?", "Submit any form on this page or use the WhatsApp and call buttons for quick help. The current booking offer is ₹500."],
+  ["How do I book my seat?", "Submit any form on this page or use the WhatsApp and call buttons for quick help. A counselor will confirm current seat availability."],
 ];
 
 export default function CuetUgLandingPage() {
@@ -118,12 +118,10 @@ export default function CuetUgLandingPage() {
           <h1>
             <span className="lp-title-highlight">CUET UG 2027</span> Preparation Program
           </h1>
-          <p>
-            Get Expert Guidance, Mock Tests, Study Material and Admission Counseling for Top Universities
-          </p>
+          <BatchClosingGraphic />
           <HeroPointList points={heroPoints} />
           <a className="lp-primary-btn lp-hero-cta" href="#lead-form">
-            Book Seat Now for ₹500
+            Book Your Seat Now
           </a>
         </div>
         <LeadForm />
@@ -221,7 +219,7 @@ export default function CuetUgLandingPage() {
         <LeadForm
           title="Download Free Kit"
           description="Enter your details to receive the CUET syllabus, planner, important topics, and sample mock test."
-          cta="Book Seat Now for ₹500"
+          cta="Book Your Seat Now"
           compact
         />
       </section>
@@ -255,7 +253,7 @@ export default function CuetUgLandingPage() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <a className="lp-secondary-btn" href="#lead-form">Book Seat Now for ₹500</a>
+              <a className="lp-secondary-btn" href="#lead-form">Book Your Seat Now</a>
             </article>
           ))}
         </div>
@@ -272,12 +270,12 @@ export default function CuetUgLandingPage() {
         <div>
           <span className="lp-eyebrow">Limited seat offer</span>
           <h2>Ready to Start Your CUET UG Preparation?</h2>
-          <p>Book your seat for ₹500 and get a clear plan for subjects, mock tests, and target universities.</p>
+          <p>Book your seat and get a clear plan for subjects, mock tests, and target universities.</p>
         </div>
         <LeadForm
-          title="Book Your Seat for ₹500"
+          title="Book Your Seat Now"
           description="A counselor will confirm seat availability and help you understand the right CUET UG preparation path."
-          cta="Book Seat Now for ₹500"
+          cta="Book Your Seat Now"
           compact
         />
       </section>
@@ -286,3 +284,4 @@ export default function CuetUgLandingPage() {
     </main>
   );
 }
+
