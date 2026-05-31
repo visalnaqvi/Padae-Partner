@@ -91,8 +91,8 @@ const faculty = [
 ];
 
 const plans = [
-  ["Foundation", "Placeholder pricing", ["Live classes", "Topic tests", "Study material", "Monthly counseling"]],
-  ["Premium", "Placeholder pricing", ["Everything in Foundation", "Weekly mocks", "Priority doubt support", "Admission counseling"]],
+  ["Foundation", "Rs. 4,999", ["Live classes", "Topic tests", "Study material", "Monthly counseling"]],
+  ["Premium", "Rs. 5,999", ["Everything in Foundation", "Weekly mocks", "Priority doubt support", "Admission counseling"]],
 ];
 
 const faqs = [
@@ -112,7 +112,7 @@ export default function CuetUgLandingPage() {
   return (
     <main className="cuet-landing">
       {/* HERO: Above-the-fold value proposition with immediate lead capture for paid traffic. */}
-      <section className="lp-hero" id="lead-form">
+      <section className="lp-hero">
         <div className="lp-hero-copy">
           <span className="lp-eyebrow">Admissions-focused CUET coaching</span>
           <h1>
@@ -120,11 +120,27 @@ export default function CuetUgLandingPage() {
           </h1>
           <BatchClosingGraphic />
           <HeroPointList points={heroPoints} />
-          <a className="lp-primary-btn lp-hero-cta" href="#lead-form">
-            Book Your Seat Now
-          </a>
+          <div className="lp-hero-actions">
+            <a className="lp-primary-btn" href="#lead-form">
+              Book Your Seat Now
+            </a>
+            <a className="lp-hero-fee-btn" href="#fee-structure-form">
+              View Fee Structure from Rs. 4,999
+            </a>
+          </div>
         </div>
-        <LeadForm />
+        <LeadForm anchorId="lead-form" />
+      </section>
+
+      <section className="lp-roadmap-section" aria-label="CUET UG preparation roadmap">
+        <picture>
+          <source media="(max-width: 719px)" srcSet="/roadmap_mobile.png" />
+          <img
+            className="lp-roadmap-image"
+            src="/roadmap_desktop.png"
+            alt="CUET UG 2027 preparation roadmap"
+          />
+        </picture>
       </section>
 
       {/* TRUST: Credibility signals placed early to reduce form hesitation. */}
@@ -240,7 +256,7 @@ export default function CuetUgLandingPage() {
       </section>
 
       {/* COURSE PLANS: Simple pricing choice architecture with the premium plan emphasized. */}
-      <section className="lp-section lp-soft-band">
+      <section className="lp-section lp-soft-band" id="course-plans">
         <SectionHeader eyebrow="Course plans" title="Choose the preparation plan that fits your goal." center />
         <div className="lp-plan-grid">
           {plans.map(([name, price, items], index) => (
@@ -259,6 +275,30 @@ export default function CuetUgLandingPage() {
         </div>
       </section>
 
+      <section className="lp-section lp-fee-form-section">
+        <div className="lp-fee-copy">
+          <SectionHeader
+            eyebrow="Fee structure"
+            title="Get the complete CUET UG course fee details."
+            description="Submit your details to receive the Foundation and Premium fee breakdown, inclusions, and current seat offer information."
+          />
+          <div className="lp-fee-list">
+            <span>Foundation: Rs. 4,999</span>
+            <span>Premium: Rs. 5,999</span>
+            <span>Counselor callback included</span>
+          </div>
+        </div>
+        <LeadForm
+          anchorId="fee-structure-form"
+          eyebrow="Fee structure"
+          title="View Fee Structure"
+          description="Fill this form and our counselor will share the complete CUET UG fee structure and plan details."
+          cta="Get Fee Structure"
+          compact
+          showOffer={false}
+        />
+      </section>
+
       {/* FAQ: Removes objections near the bottom of the paid landing page. */}
       <section className="lp-section">
         <SectionHeader eyebrow="FAQ" title="Common questions before joining." />
@@ -267,7 +307,7 @@ export default function CuetUgLandingPage() {
 
       {/* FINAL CTA: Last strong conversion point with a complete lead form. */}
       <section className="lp-section lp-final-cta">
-        <div>
+        <div className="lp-final-cta-copy">
           <span className="lp-eyebrow">Limited seat offer</span>
           <h2>Ready to Start Your CUET UG Preparation?</h2>
           <p>Book your seat and get a clear plan for subjects, mock tests, and target universities.</p>

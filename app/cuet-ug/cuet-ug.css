@@ -233,14 +233,16 @@ body:has(.cuet-landing) .footer {
 }
 
 .lp-hero-points,
-.lp-resource-list {
+.lp-resource-list,
+.lp-fee-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 24px;
 }
 
-.lp-resource-list span {
+.lp-resource-list span,
+.lp-fee-list span {
   background: #ffffff;
   border: 1px solid var(--lp-line);
   border-radius: 8px;
@@ -268,9 +270,55 @@ body:has(.cuet-landing) .footer {
   font-size: 17px;
 }
 
-.lp-hero-cta {
+.lp-hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 18px;
+}
+
+.lp-hero-actions .lp-primary-btn,
+.lp-hero-fee-btn {
   width: fit-content;
+}
+
+.lp-hero-fee-btn {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #efb485;
+  border-radius: 8px;
+  box-shadow: 0 14px 30px #10212b14;
+  color: var(--lp-deep);
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 50px;
+  padding: 13px 18px;
+  text-align: center;
+}
+
+.lp-hero-fee-btn:hover {
+  background: #fff7ea;
+  border-color: var(--lp-accent-2);
+  color: var(--lp-deep);
+}
+
+.lp-roadmap-section {
+  background: #ffffff;
+  border-bottom: 1px solid var(--lp-line);
+  padding: 0;
+}
+
+.lp-roadmap-section picture {
+  display: block;
+}
+
+.lp-roadmap-image {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 .lp-offer-timer {
@@ -446,6 +494,7 @@ body:has(.cuet-landing) .footer {
   display: grid;
   gap: 18px;
   padding: 22px;
+  scroll-margin-top: 24px;
 }
 
 .lp-hero > .lp-lead-form {
@@ -494,6 +543,26 @@ body:has(.cuet-landing) .footer {
   outline: none;
 }
 
+.lp-lead-form input:disabled,
+.lp-lead-form select:disabled {
+  background: #f2f6f4;
+  color: #6f7d83;
+  cursor: not-allowed;
+}
+
+.lp-otp-box {
+  display: grid;
+  gap: 12px;
+}
+
+.lp-otp-box .lp-secondary-btn {
+  margin-top: 0;
+}
+
+.lp-recaptcha-container {
+  min-height: 0;
+}
+
 .lp-primary-btn,
 .lp-secondary-btn {
   align-items: center;
@@ -522,6 +591,11 @@ body:has(.cuet-landing) .footer {
   color: #ffffff;
 }
 
+.lp-primary-btn:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 .lp-secondary-btn {
   background: #ffffff;
   border: 1px solid var(--lp-line);
@@ -531,7 +605,8 @@ body:has(.cuet-landing) .footer {
 }
 
 .lp-form-note,
-.lp-success-msg {
+.lp-success-msg,
+.lp-error-msg {
   font-size: 13px;
 }
 
@@ -540,6 +615,15 @@ body:has(.cuet-landing) .footer {
   border: 1px solid #b8e4ca;
   border-radius: 8px;
   color: #20643e;
+  font-weight: 800;
+  padding: 10px 12px;
+}
+
+.lp-error-msg {
+  background: #fff2ef;
+  border: 1px solid #f0b6ab;
+  border-radius: 8px;
+  color: #a63629;
   font-weight: 800;
   padding: 10px 12px;
 }
@@ -711,6 +795,7 @@ body:has(.cuet-landing) .footer {
 }
 
 .lp-resource-section,
+.lp-fee-form-section,
 .lp-final-cta {
   background:
     linear-gradient(135deg, #10212bf5 0%, #16404a 58%, #2f7d62 100%);
@@ -720,12 +805,15 @@ body:has(.cuet-landing) .footer {
 
 .lp-resource-section .lp-section-header h2,
 .lp-resource-section .lp-section-header p,
-.lp-final-cta h2,
-.lp-final-cta p {
+.lp-fee-form-section .lp-section-header h2,
+.lp-fee-form-section .lp-section-header p,
+.lp-final-cta-copy h2,
+.lp-final-cta-copy p {
   color: #ffffff;
 }
 
 .lp-resource-section .lp-lead-form,
+.lp-fee-form-section .lp-lead-form,
 .lp-final-cta .lp-lead-form {
   box-shadow: 0 28px 70px #00000030;
 }
@@ -906,6 +994,7 @@ body:has(.cuet-landing) .footer {
   }
 
   .lp-resource-section,
+  .lp-fee-form-section,
   .lp-final-cta {
     grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.72fr);
     align-items: center;
@@ -953,6 +1042,11 @@ body:has(.cuet-landing) .footer {
   }
 
   .lp-hero-cta {
+    width: 100%;
+  }
+
+  .lp-hero-actions .lp-primary-btn,
+  .lp-hero-fee-btn {
     width: 100%;
   }
 
