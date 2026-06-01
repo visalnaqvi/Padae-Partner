@@ -38,7 +38,8 @@ export default function LeadForm({
 }) {
   const formId = useId();
   const safeFormId = formId.replace(/[^a-zA-Z0-9_-]/g, "");
-  const recaptchaButtonId = `lead-recaptcha-button-${safeFormId}`;
+  const recaptchaContainerId = `lead-recaptcha-${safeFormId}`;
+  const formRef = useRef(null);
   const recaptchaVerifierRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,7 +52,7 @@ export default function LeadForm({
 
   function getRecaptchaVerifier() {
     if (!recaptchaVerifierRef.current) {
-      recaptchaVerifierRef.current = new RecaptchaVerifier(auth, recaptchaButtonId, {
+      recaptchaVerifierRef.current = new RecaptchaVerifier(auth, recaptchaContainerId, {
         size: "invisible",
       });
     }
@@ -141,8 +142,7 @@ export default function LeadForm({
   }
 
   async function handleVerifyOtp(event) {
-    event.preventDefault();
-    const form = event.currentTarget;
+    event?.preventDefault();
 
     if (!confirmationResult || !pendingLeadId) {
       setSubmitError("Please request an OTP before verifying.");
@@ -167,7 +167,7 @@ export default function LeadForm({
 
       await signOut(auth);
 
-      form.reset();
+      formRef.current?.reset();
       setOtp("");
       setConfirmationResult(null);
       setPendingLeadId("");
@@ -190,11 +190,16 @@ export default function LeadForm({
   const waitingForOtp = Boolean(confirmationResult);
 
   return (
-    <form id={anchorId} className={`lp-lead-form ${compact ? "lp-lead-form-compact" : ""}`} onSubmit={waitingForOtp ? handleVerifyOtp : handleSubmit}>
+    <form
+      ref={formRef}
+      id={anchorId}
+      className={`lp-lead-form ${compact ? "lp-lead-form-compact" : ""}`}
+      onSubmit={waitingForOtp ? handleVerifyOtp : handleSubmit}
+    >
       <div className="lp-form-copy">
-        <span className="lp-eyebrow">{eyebrow}</span>
+        {/* <span className="lp-eyebrow">{eyebrow}</span> */}
         <h2>{title}</h2>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
       </div>
 
       {showOffer ? <OfferTimer compact /> : null}
@@ -264,9 +269,9 @@ export default function LeadForm({
               autoComplete="one-time-code"
               pattern="[0-9]{6}"
               placeholder="6-digit OTP"
-              required
-              value={otp}
-              onChange={(event) => setOtp(event.target.value)}
+            required
+            value={otp}
+              onChange={(event) => setOtp(event.target.value.replace(/\D/g, "").slice(0, 6))}
               suppressHydrationWarning
             />
           </label>
@@ -276,16 +281,12 @@ export default function LeadForm({
         </div>
       ) : null}
 
-      <button
-        id={recaptchaButtonId}
-        className="lp-primary-btn"
-        type="submit"
-        disabled={isSubmitting || isVerifying}
-        suppressHydrationWarning
-      >
+      <div id={recaptchaContainerId} className="lp-recaptcha-container" />
+
+      <button className="lp-primary-btn" type={waitingForOtp ? "button" : "submit"} onClick={waitingForOtp ? handleVerifyOtp : undefined} disabled={isSubmitting || isVerifying} suppressHydrationWarning>
         {isSubmitting ? "Sending OTP..." : isVerifying ? "Verifying..." : waitingForOtp ? "Verify OTP" : cta}
       </button>
-      <p className="lp-form-note">No spam. A counselor will contact you to confirm seat availability and next steps.</p>
+      {/* <p className="lp-form-note">No spam. A counselor will contact you to confirm seat availability and next steps.</p> */}
       {submitted ? <p className="lp-success-msg">Thank you. Your number is verified and your seat booking request has been received.</p> : null}
       {submitError ? <p className="lp-error-msg">{submitError}</p> : null}
     </form>

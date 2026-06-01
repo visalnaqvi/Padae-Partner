@@ -79,7 +79,7 @@ export default function OfferTimer({ compact = false }) {
             </span>
           </div>
         ) : null}
-        <p>{details.expired ? "Submit the form to request current availability." : `${details.seatsLeft} seats are currently left for this batch.`}</p>
+        {/* <p>{details.expired ? "Submit the form to request current availability." : `${details.seatsLeft} seats are currently left for this batch.`}</p> */}
       </div>
     </div>
   );

@@ -38,6 +38,13 @@ const heroPoints = [
   ["College Admission Guidance", "bank"],
 ];
 
+const heroStats = [
+  ["5000+", "Students Mentored"],
+  ["95%+", "Success Rate"],
+  ["12+", "Years Experience"],
+  ["1000+", "University Admissions"],
+];
+
 const trustCards = [
   ["Experienced Faculty", "Learn from mentors who understand CUET patterns, board overlap, and university admission strategy.", "team"],
   ["Structured Study Plan", "Follow a weekly plan designed to cover concepts, revision, tests, and counseling milestones.", "calendar"],
@@ -108,17 +115,27 @@ const faqs = [
   ["How do I book my seat?", "Submit any form on this page or use the WhatsApp and call buttons for quick help. A counselor will confirm current seat availability."],
 ];
 
+function SectionBookButton() {
+  return (
+    <div className="lp-section-action">
+      <a className="lp-primary-btn" href="#lead-form">
+        Book Your Seat Now
+      </a>
+    </div>
+  );
+}
+
 export default function CuetUgLandingPage() {
   return (
     <main className="cuet-landing">
       {/* HERO: Above-the-fold value proposition with immediate lead capture for paid traffic. */}
       <section className="lp-hero">
         <div className="lp-hero-copy">
-          <span className="lp-eyebrow">Admissions-focused CUET coaching</span>
+          <span className="lp-eyebrow">Crack CUET UG 2027</span>
           <h1>
-            <span className="lp-title-highlight">CUET UG 2027</span> Preparation Program
+            <span className="lp-title-highlight">Secure Admission in Top Central Universities</span> 
           </h1>
-          <BatchClosingGraphic />
+          {/* <BatchClosingGraphic /> */}
           <HeroPointList points={heroPoints} />
           <div className="lp-hero-actions">
             <a className="lp-primary-btn" href="#lead-form">
@@ -132,6 +149,29 @@ export default function CuetUgLandingPage() {
         <LeadForm anchorId="lead-form" />
       </section>
 
+      <section className="lp-stats-section" aria-label="Padae Partner student outcomes">
+        <div className="lp-stats-copy">
+          <span className="lp-eyebrow">Trusted by CUET aspirants</span>
+          <h2>Proven guidance for ambitious university goals.</h2>
+        </div>
+        <div className="lp-stats-grid">
+          {heroStats.map(([value, label]) => (
+            <article className="lp-stat-card" key={label}>
+              <strong>{value}</strong>
+              <span>{label}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="lp-result-section" aria-label="CUET UG 2025 student results">
+        <img
+          className="lp-result-image"
+          src="/uet_ug_2025_result.png"
+          alt="CUET UG 2025 student result highlights"
+        />
+      </section>
+
       <section className="lp-roadmap-section" aria-label="CUET UG preparation roadmap">
         <picture>
           <source media="(max-width: 719px)" srcSet="/roadmap_mobile.png" />
@@ -141,6 +181,7 @@ export default function CuetUgLandingPage() {
             alt="CUET UG 2027 preparation roadmap"
           />
         </picture>
+        <SectionBookButton />
       </section>
 
       {/* TRUST: Credibility signals placed early to reduce form hesitation. */}
@@ -150,10 +191,11 @@ export default function CuetUgLandingPage() {
             <InfoCard key={title} title={title} description={description} icon={icon} />
           ))}
         </div>
+        <SectionBookButton />
       </section>
 
       {/* WHY CUET MATTERS: Problem framing that validates urgency for the ad visitor. */}
-      <section className="lp-section">
+      {/* <section className="lp-section">
         <SectionHeader
           eyebrow="Why CUET matters"
           title="A better CUET score can widen your admission choices."
@@ -164,7 +206,8 @@ export default function CuetUgLandingPage() {
             <InfoCard key={title} title={title} description={description} icon={icon} tag={`0${index + 1}`} />
           ))}
         </div>
-      </section>
+        <SectionBookButton />
+      </section> */}
 
       {/* WHY CHOOSE US: Benefit-led proof points for conversion decision making. */}
       <section className="lp-section lp-soft-band">
@@ -174,10 +217,11 @@ export default function CuetUgLandingPage() {
             <FeatureCard key={title} title={title} description={description} icon={icon} />
           ))}
         </div>
+        <SectionBookButton />
       </section>
 
       {/* COURSE FEATURES: Detailed offer clarity for high-intent Google Ads users. */}
-      <section className="lp-section">
+      {/* <section className="lp-section">
         <SectionHeader
           eyebrow="Course features"
           title="A complete CUET UG preparation system."
@@ -188,7 +232,8 @@ export default function CuetUgLandingPage() {
             <FeatureCard key={title} title={title} description={description} icon={icon} />
           ))}
         </div>
-      </section>
+        <SectionBookButton />
+      </section> */}
 
       {/* TARGET UNIVERSITIES: Helps students connect preparation to aspirational outcomes. */}
       <section className="lp-section lp-university-section">
@@ -201,6 +246,7 @@ export default function CuetUgLandingPage() {
             </article>
           ))}
         </div>
+        <SectionBookButton />
       </section>
 
       {/* SUCCESS STORIES: Social proof section for confidence before the next lead form. */}
@@ -216,6 +262,7 @@ export default function CuetUgLandingPage() {
             </article>
           ))}
         </div>
+        <SectionBookButton />
       </section>
 
       {/* FREE RESOURCE: Mid-page lead magnet for visitors not ready to book counseling. */}
@@ -253,6 +300,7 @@ export default function CuetUgLandingPage() {
             </article>
           ))}
         </div>
+        <SectionBookButton />
       </section>
 
       {/* COURSE PLANS: Simple pricing choice architecture with the premium plan emphasized. */}
@@ -273,6 +321,7 @@ export default function CuetUgLandingPage() {
             </article>
           ))}
         </div>
+        <SectionBookButton />
       </section>
 
       <section className="lp-section lp-fee-form-section">
@@ -303,6 +352,7 @@ export default function CuetUgLandingPage() {
       <section className="lp-section">
         <SectionHeader eyebrow="FAQ" title="Common questions before joining." />
         <FAQAccordion faqs={faqs.map(([question, answer]) => ({ question, answer }))} />
+        <SectionBookButton />
       </section>
 
       {/* FINAL CTA: Last strong conversion point with a complete lead form. */}
@@ -324,4 +374,3 @@ export default function CuetUgLandingPage() {
     </main>
   );
 }
-
