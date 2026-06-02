@@ -172,6 +172,18 @@ export default function CuetUgLandingPage() {
         />
       </section>
 
+      {/* UNIVERSITY ADMISSIONS COUNT: Graphic proof of student admissions from Padae Partner coaching. */}
+      <section className="lp-admissions-count-section" aria-label="Padae Partner university admissions count">
+        <picture>
+          <source media="(max-width: 719px)" srcSet="/uni_count_mb.png" />
+          <img
+            className="lp-admissions-count-image"
+            src="/uni_count_desktop.png"
+            alt="University admissions count achieved by Padae Partner students"
+          />
+        </picture>
+      </section>
+
       <section className="lp-roadmap-section" aria-label="CUET UG preparation roadmap">
         <picture>
           <source media="(max-width: 719px)" srcSet="/roadmap_mobile.png" />

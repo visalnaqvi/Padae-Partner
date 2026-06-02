@@ -446,6 +446,22 @@ body:has(.cuet-landing) .footer {
   width: 100%;
 }
 
+.lp-admissions-count-section {
+  background: #ffffff;
+  border-bottom: 1px solid var(--lp-line);
+  padding: 0;
+}
+
+.lp-admissions-count-section picture {
+  display: block;
+}
+
+.lp-admissions-count-image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .lp-offer-timer {
   background:
     linear-gradient(135deg, #ffffff 0%, #fff8ed 54%, #fff1df 100%);
