@@ -311,6 +311,7 @@ body:has(.cuet-landing) .footer {
   background: #ffffff;
   border-bottom: 1px solid var(--lp-line);
   padding: 0;
+  margin-top: 30px;
 }
 
 .lp-roadmap-section picture {
@@ -429,10 +430,11 @@ body:has(.cuet-landing) .footer {
 }
 
 .lp-result-section {
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f4faf7 100%);
+    background: #ffffff;
+
   border-bottom: 1px solid var(--lp-line);
-  padding: 28px 18px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .lp-result-image {
