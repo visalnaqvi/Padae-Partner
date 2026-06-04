@@ -956,6 +956,86 @@ body:has(.cuet-landing) .footer {
   margin-bottom: 10px;
 }
 
+.lp-success-section {
+  background:
+    radial-gradient(circle at 8% 18%, #ef9b2d38 0, transparent 28%),
+    radial-gradient(circle at 92% 82%, #52b99133 0, transparent 30%),
+    linear-gradient(135deg, #0c2730 0%, #153f49 55%, #245f52 100%);
+  border-bottom: 1px solid #ffffff1f;
+  border-top: 1px solid #ffffff1f;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.lp-success-section::before {
+  background-image: url("/trophy_bg.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 360px auto;
+  content: "";
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.lp-success-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lp-success-section .lp-section-header h2,
+.lp-success-section .lp-section-header p {
+  color: #ffffff;
+}
+
+.lp-success-section .lp-eyebrow {
+  background: #ffffff12;
+  border-color: #ffffff30;
+  box-shadow: none;
+  color: #ffd9b0;
+}
+
+.lp-success-section .lp-testimonial-card {
+  background: #ffffffed;
+  border-color: #ffffff;
+  box-shadow: 0 24px 54px #071b2138;
+  overflow: hidden;
+  position: relative;
+}
+
+.lp-success-section .lp-testimonial-card::before {
+  background: linear-gradient(90deg, var(--lp-accent), var(--lp-accent-2));
+  content: "";
+  height: 5px;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+.lp-success-section .lp-testimonial-card::after {
+  color: #2f7d6217;
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 108px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 18px;
+}
+
+.lp-success-section .lp-testimonial-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lp-success-section .lp-section-action .lp-primary-btn {
+  box-shadow: 0 18px 38px #00000038;
+}
+
 .lp-resource-section,
 .lp-fee-form-section,
 .lp-final-cta {

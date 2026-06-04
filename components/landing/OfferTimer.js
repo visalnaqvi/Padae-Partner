@@ -3,6 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import LandingIcon from "./LandingIcon";
 
+const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function formatClosingDate(date) {
+  return `${WEEKDAYS[date.getDay()]} ${date.getDate()} ${MONTHS[date.getMonth()]}`;
+}
+
 export function getBatchClosingDetails(now = new Date()) {
   const closingDate = new Date(now);
   const daysUntilFriday = (5 - now.getDay() + 7) % 7;
@@ -19,11 +26,7 @@ export function getBatchClosingDetails(now = new Date()) {
 
   return {
     seatsLeft,
-    closingDateLabel: closingDate.toLocaleDateString("en-IN", {
-      weekday: "long",
-      day: "numeric",
-      month: "short",
-    }),
+    closingDateLabel: formatClosingDate(closingDate),
     days: days.toString().padStart(2, "0"),
     hours: hours.toString().padStart(2, "0"),
     minutes: minutes.toString().padStart(2, "0"),

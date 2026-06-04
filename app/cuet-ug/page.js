@@ -4,7 +4,6 @@ import { FeatureCard, InfoCard } from "@/components/landing/CardGrid";
 import BatchClosingGraphic from "@/components/landing/BatchClosingGraphic";
 import FAQAccordion from "@/components/landing/FAQAccordion";
 import HeroPointList from "@/components/landing/HeroPointList";
-import PlaceholderImage from "@/components/landing/PlaceholderImage";
 import StickyActions from "@/components/landing/StickyActions";
 import "./cuet-ug.css";
 
@@ -80,21 +79,21 @@ const features = [
 const universities = ["Delhi University", "BHU", "JMI", "AMU", "Other Top Universities"];
 
 const testimonials = [
-  ["Aarav Sharma", "734/800", "Delhi University", "The mock tests and counseling sessions helped me stay clear about my target courses."],
-  ["Meera Khan", "712/800", "Jamia Millia Islamia", "Weekly tests showed exactly where I needed revision before the exam."],
-  ["Ritika Verma", "748/800", "BHU", "The PYQ practice made the paper feel familiar and manageable."],
-  ["Kabir Singh", "701/800", "AMU", "Doubt sessions helped me fix weak topics without losing momentum."],
-  ["Ananya Das", "756/800", "Delhi University", "The study planner kept my CUET preparation structured with school work."],
-  ["Yusuf Ali", "729/800", "BHU", "Admission counseling made course and university choices much easier."],
+  ["Aarav Sharma", "734/800", "Delhi University", "The mock tests and counseling sessions helped me stay clear about my target courses.", "/Aarav_Sharma.png"],
+  ["Meera Khan", "712/800", "Jamia Millia Islamia", "Weekly tests showed exactly where I needed revision before the exam.", "/Meera_Khan.png"],
+  ["Ritika Verma", "748/800", "BHU", "The PYQ practice made the paper feel familiar and manageable.", "/Ritika_Verma.png"],
+  ["Kabir Singh", "701/800", "AMU", "Doubt sessions helped me fix weak topics without losing momentum.", "/Kabir_Singh.png"],
+  ["Ananya Das", "756/800", "Delhi University", "The study planner kept my CUET preparation structured with school work.", "/Ananya_Das.png"],
+  ["Yusuf Ali", "729/800", "BHU", "Admission counseling made course and university choices much easier.", "/Yusuf_Ali.png"],
 ];
 
 const resources = ["Syllabus PDF", "Important Topics", "Study Planner", "Sample Mock Test"];
 
 const faculty = [
-  ["Dr. Nisha Mehra", "Ph.D. English", "12+ years"],
-  ["Rahul Malhotra", "M.Sc. Mathematics", "9+ years"],
-  ["Sana Siddiqui", "M.A. Political Science", "10+ years"],
-  ["Amit Bansal", "MBA, Aptitude Specialist", "8+ years"],
+  ["Dr. Nisha Mehra", "Ph.D. English", "12+ years", "/Nisha_Mehra.png"],
+  ["Rahul Malhotra", "M.Sc. Mathematics", "9+ years", "/Rahul_Malhotra.png"],
+  ["Sana Siddiqui", "M.A. Political Science", "10+ years", "/Sana_Siddiqui.png"],
+  ["Amit Bansal", "MBA, Aptitude Specialist", "8+ years", "/Amit_Bansal.png"],
 ];
 
 const plans = [
@@ -196,6 +195,83 @@ export default function CuetUgLandingPage() {
         <SectionBookButton />
       </section>
 
+      {/* SUCCESS STORIES: Social proof section for confidence before the next lead form. */}
+      <section className="lp-section lp-success-section">
+        <SectionHeader eyebrow="Success stories" title="Students who prepared with clarity and confidence." />
+        <div className="lp-testimonial-grid">
+          {testimonials.map(([name, score, university, quote, image]) => (
+            <article className="lp-testimonial-card" key={name}>
+              <img className="lp-avatar-img" src={image} alt={`${name}, CUET student`} />
+              <h3>{name}</h3>
+              <p className="lp-score">{score} | {university}</p>
+              <p>{quote}</p>
+            </article>
+          ))}
+        </div>
+        <SectionBookButton />
+      </section>
+
+      {/* FACULTY: Humanizes the institute and reinforces mentor credibility. */}
+      <section className="lp-section">
+        <SectionHeader eyebrow="Faculty" title="Learn with experienced CUET mentors." center />
+        <div className="lp-faculty-grid">
+          {faculty.map(([name, qualification, experience, image]) => (
+            <article className="lp-faculty-card" key={name}>
+              <img className="lp-faculty-img" src={image} alt={`${name}, CUET faculty`} />
+              <h3>{name}</h3>
+              <p>{qualification}</p>
+              <span>{experience} experience</span>
+            </article>
+          ))}
+        </div>
+        <SectionBookButton />
+      </section>
+
+      {/* COURSE PLANS: Simple pricing choice architecture with the premium plan emphasized. */}
+      <section className="lp-section lp-soft-band" id="course-plans">
+        <SectionHeader eyebrow="Course plans" title="Choose the preparation plan that fits your goal." center />
+        <div className="lp-plan-grid">
+          {plans.map(([name, price, items], index) => (
+            <article className={`lp-plan-card ${index === 1 ? "lp-plan-featured" : ""}`} key={name}>
+              {index === 1 ? <span className="lp-plan-badge">Most popular</span> : null}
+              <h3>{name}</h3>
+              <p className="lp-plan-price">{price}</p>
+              <ul>
+                {items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <a className="lp-secondary-btn" href="#lead-form">Book Your Seat Now</a>
+            </article>
+          ))}
+        </div>
+        <SectionBookButton />
+      </section>
+
+      <section className="lp-section lp-fee-form-section">
+        <div className="lp-fee-copy">
+          <SectionHeader
+            eyebrow="Fee structure"
+            title="Get the complete CUET UG course fee details."
+            description="Submit your details to receive the Foundation and Premium fee breakdown, inclusions, and current seat offer information."
+          />
+          <div className="lp-fee-list">
+            <span>Foundation: Rs. 4,999</span>
+            <span>Premium: Rs. 5,999</span>
+            <span>Counselor callback included</span>
+          </div>
+        </div>
+        <LeadForm
+          anchorId="fee-structure-form"
+          eyebrow="Fee structure"
+          title="View Fee Structure"
+          description="Fill this form and our counselor will share the complete CUET UG fee structure and plan details."
+          cta="Get Fee Structure"
+          compact
+          showOffer={false}
+        />
+      </section>
+
       {/* TRUST: Credibility signals placed early to reduce form hesitation. */}
       <section className="lp-section lp-trust-section">
         <div className="lp-trust-grid">
@@ -261,22 +337,6 @@ export default function CuetUgLandingPage() {
         <SectionBookButton />
       </section>
 
-      {/* SUCCESS STORIES: Social proof section for confidence before the next lead form. */}
-      <section className="lp-section">
-        <SectionHeader eyebrow="Success stories" title="Students who prepared with clarity and confidence." />
-        <div className="lp-testimonial-grid">
-          {testimonials.map(([name, score, university, quote], index) => (
-            <article className="lp-testimonial-card" key={name}>
-              <PlaceholderImage label={name} tone={index % 2 ? "coral" : "teal"} className="lp-avatar-img" />
-              <h3>{name}</h3>
-              <p className="lp-score">{score} | {university}</p>
-              <p>{quote}</p>
-            </article>
-          ))}
-        </div>
-        <SectionBookButton />
-      </section>
-
       {/* FREE RESOURCE: Mid-page lead magnet for visitors not ready to book counseling. */}
       <section className="lp-section lp-resource-section">
         <div className="lp-resource-copy">
@@ -296,67 +356,6 @@ export default function CuetUgLandingPage() {
           description="Enter your details to receive the CUET syllabus, planner, important topics, and sample mock test."
           cta="Book Your Seat Now"
           compact
-        />
-      </section>
-
-      {/* FACULTY: Humanizes the institute and reinforces mentor credibility. */}
-      <section className="lp-section">
-        <SectionHeader eyebrow="Faculty" title="Learn with experienced CUET mentors." center />
-        <div className="lp-faculty-grid">
-          {faculty.map(([name, qualification, experience], index) => (
-            <article className="lp-faculty-card" key={name}>
-              <PlaceholderImage label={name} tone={index % 2 ? "gold" : "teal"} className="lp-faculty-img" />
-              <h3>{name}</h3>
-              <p>{qualification}</p>
-              <span>{experience} experience</span>
-            </article>
-          ))}
-        </div>
-        <SectionBookButton />
-      </section>
-
-      {/* COURSE PLANS: Simple pricing choice architecture with the premium plan emphasized. */}
-      <section className="lp-section lp-soft-band" id="course-plans">
-        <SectionHeader eyebrow="Course plans" title="Choose the preparation plan that fits your goal." center />
-        <div className="lp-plan-grid">
-          {plans.map(([name, price, items], index) => (
-            <article className={`lp-plan-card ${index === 1 ? "lp-plan-featured" : ""}`} key={name}>
-              {index === 1 ? <span className="lp-plan-badge">Most popular</span> : null}
-              <h3>{name}</h3>
-              <p className="lp-plan-price">{price}</p>
-              <ul>
-                {items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <a className="lp-secondary-btn" href="#lead-form">Book Your Seat Now</a>
-            </article>
-          ))}
-        </div>
-        <SectionBookButton />
-      </section>
-
-      <section className="lp-section lp-fee-form-section">
-        <div className="lp-fee-copy">
-          <SectionHeader
-            eyebrow="Fee structure"
-            title="Get the complete CUET UG course fee details."
-            description="Submit your details to receive the Foundation and Premium fee breakdown, inclusions, and current seat offer information."
-          />
-          <div className="lp-fee-list">
-            <span>Foundation: Rs. 4,999</span>
-            <span>Premium: Rs. 5,999</span>
-            <span>Counselor callback included</span>
-          </div>
-        </div>
-        <LeadForm
-          anchorId="fee-structure-form"
-          eyebrow="Fee structure"
-          title="View Fee Structure"
-          description="Fill this form and our counselor will share the complete CUET UG fee structure and plan details."
-          cta="Get Fee Structure"
-          compact
-          showOffer={false}
         />
       </section>
 
