@@ -7,34 +7,79 @@ import HeroPointList from "@/components/landing/HeroPointList";
 import StickyActions from "@/components/landing/StickyActions";
 import "./cuet-ug.css";
 
+const pageUrl = "/cuet-ug-2027-coaching";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://padaepartner.com";
+const pageTitle = "CUET UG Coaching 2027 | Online CUET Classes, Mock Tests & Counseling";
+const pageDescription =
+  "Join Padae Partner CUET UG coaching for 2027 with live online classes, mock tests, PYQ practice, doubt solving, study material, and admission counseling for top universities.";
+const pageKeywords = [
+  "CUET UG coaching",
+  "CUET UG coaching 2027",
+  "CUET coaching online",
+  "CUET UG online classes",
+  "CUET preparation course",
+  "CUET mock test series",
+  "CUET previous year questions",
+  "CUET UG admission counseling",
+  "best CUET UG coaching",
+  "CUET coaching for Delhi University",
+  "CUET classes for 12th students",
+  "CUET UG study material",
+];
+
 export function generateMetadata() {
   return {
-    title: "CUET UG 2027 Coaching Program | Book Your Seat",
-    description:
-      "Book your CUET UG 2027 preparation seat with live classes, mock tests, study material, doubt sessions, and admission counseling for top universities.",
+    metadataBase: new URL(siteUrl),
+    title: pageTitle,
+    description: pageDescription,
+    keywords: pageKeywords,
+    applicationName: "Padae Partner",
+    category: "Education",
+    alternates: {
+      canonical: pageUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     openGraph: {
-      title: "CUET UG 2027 Preparation Program",
-      description:
-        "Expert CUET UG coaching with live classes, mock tests, PYQs, performance tracking, and limited seat booking.",
-      url: "/cuet-ug-2027-coaching",
+      title: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
       siteName: "Padae Partner",
+      images: [
+        {
+          url: "/uet_ug_2025_result.png",
+          width: 1200,
+          height: 630,
+          alt: "Padae Partner CUET UG coaching student results",
+        },
+      ],
+      locale: "en_IN",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "CUET UG 2027 Coaching Program",
-      description:
-        "Book your CUET UG 2027 preparation seat and get expert guidance, mock tests, and admission counseling.",
+      title: pageTitle,
+      description: pageDescription,
+      images: ["/uet_ug_2025_result.png"],
     },
   };
 }
 
 const heroPoints = [
-  ["Live Classes", "play"],
-  ["Mock Tests", "check"],
+  ["CUET UG Online Coaching", "play"],
+  ["CUET Mock Tests", "check"],
   ["Doubt Sessions", "message"],
   ["Previous Year Questions", "book"],
-  ["College Admission Guidance", "bank"],
+  ["University Admission Counseling", "bank"],
 ];
 
 const heroStats = [
@@ -45,10 +90,10 @@ const heroStats = [
 ];
 
 const trustCards = [
-  ["Experienced Faculty", "Learn from mentors who understand CUET patterns, board overlap, and university admission strategy.", "team"],
-  ["Structured Study Plan", "Follow a weekly plan designed to cover concepts, revision, tests, and counseling milestones.", "calendar"],
-  ["Regular Testing", "Measure readiness with topic tests, full-length mocks, and exam-style practice.", "fileSearch"],
-  ["Personalized Guidance", "Get help choosing subjects, target courses, and university preferences.", "solution"],
+  ["Experienced CUET Faculty", "Learn from mentors who understand CUET UG patterns, board overlap, and university admission strategy.", "team"],
+  ["Structured CUET Study Plan", "Follow a weekly CUET preparation plan designed to cover concepts, revision, tests, and counseling milestones.", "calendar"],
+  ["Regular CUET Testing", "Measure readiness with topic tests, full-length CUET mock tests, and exam-style practice.", "fileSearch"],
+  ["Personalized Admission Guidance", "Get help choosing CUET subjects, target courses, and university preferences.", "solution"],
 ];
 
 const whyMatters = [
@@ -58,12 +103,12 @@ const whyMatters = [
 ];
 
 const benefits = [
-  ["Expert Mentors", "Subject experts simplify concepts and keep preparation focused on CUET requirements.", "team"],
-  ["Weekly Mock Tests", "Frequent practice builds speed, accuracy, and confidence before the real exam.", "fileSearch"],
+  ["Expert CUET Mentors", "Subject experts simplify concepts and keep preparation focused on CUET UG requirements.", "team"],
+  ["Weekly CUET Mock Tests", "Frequent CUET mock test practice builds speed, accuracy, and confidence before the real exam.", "fileSearch"],
   ["Performance Tracking", "Reports show strengths, weak topics, and the next actions to improve scores.", "barChart"],
   ["Doubt Solving", "Dedicated doubt support helps students stay consistent instead of getting stuck.", "message"],
   ["Admission Counseling", "Counselors guide course selection, university targeting, and preference planning.", "solution"],
-  ["Study Material", "Access concise notes, PYQs, topic worksheets, and revision resources.", "book"],
+  ["CUET Study Material", "Access concise notes, CUET PYQs, topic worksheets, and revision resources.", "book"],
 ];
 
 const features = [
@@ -102,10 +147,10 @@ const plans = [
 ];
 
 const faqs = [
-  ["Who can join the CUET UG 2027 program?", "Students in Class 11, Class 12, and droppers preparing for CUET UG 2027 can join."],
-  ["Is this program online or offline?", "The program is designed for live online learning with recorded support and counseling calls."],
-  ["Do you provide mock tests?", "Yes. Students get topic-wise tests, weekly practice, and full-length mock tests."],
-  ["Will I get previous year questions?", "Yes. PYQ practice is included to help students understand CUET question patterns."],
+  ["Who can join the CUET UG 2027 coaching program?", "Students in Class 11, Class 12, and droppers preparing for CUET UG 2027 can join."],
+  ["Is this CUET UG coaching online or offline?", "The CUET UG coaching program is designed for live online learning with recorded support and counseling calls."],
+  ["Do you provide CUET mock tests?", "Yes. Students get topic-wise tests, weekly CUET practice, and full-length mock tests."],
+  ["Will I get CUET previous year questions?", "Yes. CUET PYQ practice is included to help students understand question patterns."],
   ["Do you help with university selection?", "Yes. Admission counseling helps students choose target courses and universities."],
   ["Can I access recorded classes?", "Yes. Recorded sessions are available for revision and missed classes."],
   ["Is study material included?", "Yes. Students receive notes, practice sheets, planners, and important topic resources."],
@@ -113,6 +158,42 @@ const faqs = [
   ["Do you track my performance?", "Yes. Performance reports highlight accuracy, weak topics, and score improvement."],
   ["How do I book my seat?", "Submit any form on this page or use the WhatsApp and call buttons for quick help. A counselor will confirm current seat availability."],
 ];
+
+const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "CUET UG Coaching 2027",
+  description: pageDescription,
+  provider: {
+    "@type": "EducationalOrganization",
+    name: "Padae Partner",
+    url: siteUrl,
+  },
+  educationalLevel: "Undergraduate entrance exam preparation",
+  courseMode: "Online",
+  url: `${siteUrl}${pageUrl}`,
+  offers: plans.map(([name, price]) => ({
+    "@type": "Offer",
+    name: `${name} CUET UG Coaching Plan`,
+    price: price.replace("Rs. ", ""),
+    priceCurrency: "INR",
+    availability: "https://schema.org/InStock",
+    url: `${siteUrl}${pageUrl}`,
+  })),
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
 
 function SectionBookButton() {
   return (
@@ -127,13 +208,23 @@ function SectionBookButton() {
 export default function CuetUgLandingPage() {
   return (
     <main className="cuet-landing">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([courseSchema, faqSchema]),
+        }}
+      />
       {/* HERO: Above-the-fold value proposition with immediate lead capture for paid traffic. */}
       <section className="lp-hero">
         <div className="lp-hero-copy">
-          <span className="lp-eyebrow">Crack CUET UG 2027</span>
+          <span className="lp-eyebrow">CUET UG coaching 2027</span>
           <h1>
-            <span className="lp-title-highlight">Secure Admission in Top Central Universities</span> 
+            <span className="lp-title-highlight">CUET UG Coaching for Top Central University Admissions</span> 
           </h1>
+          <p>
+            Prepare for CUET UG 2027 with live online classes, mock tests, PYQ practice,
+            study material, doubt support, and admission counseling from Padae Partner.
+          </p>
           {/* <BatchClosingGraphic /> */}
           <HeroPointList points={heroPoints} />
           <div className="lp-hero-actions">
@@ -151,7 +242,7 @@ export default function CuetUgLandingPage() {
       <section className="lp-stats-section" aria-label="Padae Partner student outcomes">
         <div className="lp-stats-copy">
           <span className="lp-eyebrow">Trusted by CUET aspirants</span>
-          <h2>Proven guidance for ambitious university goals.</h2>
+          <h2>CUET UG preparation guidance for ambitious university goals.</h2>
         </div>
         <div className="lp-stats-grid">
           {heroStats.map(([value, label]) => (
@@ -213,7 +304,7 @@ export default function CuetUgLandingPage() {
 
       {/* FACULTY: Humanizes the institute and reinforces mentor credibility. */}
       <section className="lp-section">
-        <SectionHeader eyebrow="Faculty" title="Learn with experienced CUET mentors." center />
+        <SectionHeader eyebrow="CUET faculty" title="Learn with experienced CUET UG coaching mentors." center />
         <div className="lp-faculty-grid">
           {faculty.map(([name, qualification, experience, image]) => (
             <article className="lp-faculty-card" key={name}>
@@ -229,7 +320,7 @@ export default function CuetUgLandingPage() {
 
       {/* COURSE PLANS: Simple pricing choice architecture with the premium plan emphasized. */}
       <section className="lp-section lp-soft-band" id="course-plans">
-        <SectionHeader eyebrow="Course plans" title="Choose the preparation plan that fits your goal." center />
+        <SectionHeader eyebrow="CUET coaching plans" title="Choose the CUET UG preparation plan that fits your goal." center />
         <div className="lp-plan-grid">
           {plans.map(([name, price, items], index) => (
             <article className={`lp-plan-card ${index === 1 ? "lp-plan-featured" : ""}`} key={name}>
@@ -299,7 +390,7 @@ export default function CuetUgLandingPage() {
 
       {/* WHY CHOOSE US: Benefit-led proof points for conversion decision making. */}
       <section className="lp-section lp-soft-band">
-        <SectionHeader eyebrow="Why choose us" title="Everything students need to prepare with direction." center />
+        <SectionHeader eyebrow="Why choose us" title="CUET UG coaching support for focused preparation." center />
         <div className="lp-feature-grid">
           {benefits.map(([title, description, icon]) => (
             <FeatureCard key={title} title={title} description={description} icon={icon} />

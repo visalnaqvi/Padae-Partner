@@ -9,7 +9,7 @@ const trustPoints = [
 ];
 
 export const metadata: Metadata = {
-  title: "Padae Partner | Trusted Exam Guides and Study Insights",
+  title: "Trusted Exam Guides and Study Insights",
   description:
     "Padae Partner is a modern blogging platform for students preparing for CUET, UPSC, and other competitive exams with clear guides, strategies, and trusted insights.",
   keywords:
