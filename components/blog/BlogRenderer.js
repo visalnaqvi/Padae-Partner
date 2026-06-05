@@ -7,11 +7,13 @@ import Hero from "./Hero";
 import ImageBlock from "./ImageBlock";
 import LeadForm from "./LeadForm";
 import Paragraph from "./Paragraph";
+import SubHeading from "./SubHeading";
 import TableBlock from "./TableBlock";
 
 const componentMap = {
   hero: Hero,
   heading: Heading,
+  subheading: SubHeading,
   paragraph: Paragraph,
   image: ImageBlock,
   table: TableBlock,

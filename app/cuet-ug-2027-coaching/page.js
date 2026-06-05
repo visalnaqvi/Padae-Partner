@@ -124,8 +124,8 @@ const features = [
 const universities = ["Delhi University", "BHU", "JMI", "AMU", "Other Top Universities"];
 
 const testimonials = [
-  ["Aarav Sharma", "734/800", "Delhi University", "The mock tests and counseling sessions helped me stay clear about my target courses.", "/Aarav_Sharma.png"],
-  ["Meera Khan", "712/800", "Jamia Millia Islamia", "Weekly tests showed exactly where I needed revision before the exam.", "/Meera_Khan.png"],
+  // ["Aarav Sharma", "734/800", "Delhi University", "The mock tests and counseling sessions helped me stay clear about my target courses.", "/Aarav_Sharma.png"],
+  // ["Meera Khan", "712/800", "Jamia Millia Islamia", "Weekly tests showed exactly where I needed revision before the exam.", "/Meera_Khan.png"],
   ["Ritika Verma", "748/800", "BHU", "The PYQ practice made the paper feel familiar and manageable.", "/Ritika_Verma.png"],
   ["Kabir Singh", "701/800", "AMU", "Doubt sessions helped me fix weak topics without losing momentum.", "/Kabir_Singh.png"],
   ["Ananya Das", "756/800", "Delhi University", "The study planner kept my CUET preparation structured with school work.", "/Ananya_Das.png"],
@@ -138,7 +138,7 @@ const faculty = [
   ["Dr. Nisha Mehra", "Ph.D. English", "12+ years", "/Nisha_Mehra.png"],
   ["Rahul Malhotra", "M.Sc. Mathematics", "9+ years", "/Rahul_Malhotra.png"],
   ["Sana Siddiqui", "M.A. Political Science", "10+ years", "/Sana_Siddiqui.png"],
-  ["Amit Bansal", "MBA, Aptitude Specialist", "8+ years", "/Amit_Bansal.png"],
+  // ["Amit Bansal", "MBA, Aptitude Specialist", "8+ years", "/Amit_Bansal.png"],
 ];
 
 const plans = [
