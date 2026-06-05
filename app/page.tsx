@@ -32,7 +32,7 @@ export default function Home() {
             <Link className="primary-link" href="#featured">
               Explore Articles
             </Link>
-            <Link className="secondary-link" href="/cuet-ug">
+            <Link className="secondary-link" href="/cuet-ug-2027-coaching">
               CUET Guides
             </Link>
           </div>

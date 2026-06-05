@@ -16,7 +16,7 @@ export function generateMetadata() {
       title: "CUET UG 2027 Preparation Program",
       description:
         "Expert CUET UG coaching with live classes, mock tests, PYQs, performance tracking, and limited seat booking.",
-      url: "/cuet-ug",
+      url: "/cuet-ug-2027-coaching",
       siteName: "Padae Partner",
       type: "website",
     },

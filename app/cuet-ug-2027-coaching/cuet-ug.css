@@ -1,4 +1,3 @@
-body:has(.cuet-landing) .nav,
 body:has(.cuet-landing) .footer {
   display: none;
 }
