@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/cuet-ug-2027-coaching", label: "CUET UG Coaching" },
+  { href: "/mock-tests", label: "Mock Tests" },
   { href: "/blog", label: "Blog" },
   { href: "/announcement", label: "Announcements" },
   { href: "/latest-updates", label: "Latest Updates" },

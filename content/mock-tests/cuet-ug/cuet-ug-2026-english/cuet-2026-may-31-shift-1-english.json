@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "cuet-2026-may-31-shift-1-english",
+  "title": "CUET 2026 May 31 Shift 1 English",
+  "description": "Memory-based CUET 2026 May 31 Shift 1 English question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Choose the word that is closest in meaning to 'intransigent' as used in the sentence: 'The negotiations failed because both parties remained intransigent despite repeated attempts at compromise.'",
+      "options": [
+        "Reconciliatory",
+        "Obstinate",
+        "Persuasive",
+        "Pragmatic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "question": "Choose the sentence that is grammatically correct.",
+      "options": [
+        "Neither the principal nor the teachers was aware of the discrepancy.",
+        "Neither the principal nor the teachers were aware of the discrepancy.",
+        "Neither the principal nor the teachers has been aware of the discrepancy.",
+        "Neither the principal nor the teachers is aware of the discrepancy."
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Choose the word that is opposite in meaning to 'equivocal' as used in the sentence: 'The witness gave an equivocal response that created further confusion during the investigation.'",
+      "options": [
+        "Ambiguous",
+        "Vague",
+        "Explicit",
+        "Dubious"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "Choose the grammatically correct sentence.",
+      "options": [
+        "Hardly had the lecture begun when the fire alarm rang.",
+        "Hardly had the lecture begun than the fire alarm rang.",
+        "Hardly the lecture had begun when the fire alarm rang.",
+        "Hardly had begun the lecture when the fire alarm rang."
+      ],
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "question": "Read the statement carefully and choose the most logical inference. 'Although artificial intelligence has significantly improved productivity across industries, concerns regarding algorithmic bias and data privacy continue to generate debate among policymakers.'",
+      "options": [
+        "Artificial intelligence has been universally accepted without criticism.",
+        "Productivity gains eliminate concerns about privacy.",
+        "Artificial intelligence offers advantages while simultaneously creating challenges.",
+        "Policymakers oppose all technological innovation."
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "Choose the word that best completes the sentence. The historian's account was so ____ that even minor inconsistencies in the primary sources were carefully examined before any conclusion was drawn.",
+      "options": [
+        "Perfunctory",
+        "Meticulous",
+        "Arbitrary",
+        "Impulsive"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "Choose the sentence that contains no grammatical error.",
+      "options": [
+        "Each of the participants have submitted their reports on time.",
+        "Each of the participants has submitted his or her report on time.",
+        "Each of the participants have submitted his report on time.",
+        "Each of the participants has submitted their reports on time."
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Choose the option that best expresses the meaning of the following sentence. 'The committee's recommendation was not entirely devoid of merit.'",
+      "options": [
+        "The recommendation was completely useless.",
+        "The recommendation possessed some merit.",
+        "The recommendation was unquestionably correct.",
+        "The recommendation lacked any practical value."
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "Read the following passage carefully and answer the question that follows. 'In democratic societies, dissent is often viewed as a sign of institutional weakness. However, political theorists argue that the ability of citizens to openly criticize policies and institutions is not merely compatible with democracy but essential to its survival. A society that suppresses criticism may achieve temporary stability, but such stability often masks deeper structural problems that remain unresolved.' Which of the following assumptions is most strongly supported by the passage?",
+      "options": [
+        "All criticism of government policies is justified.",
+        "Democratic institutions function best when criticism is prohibited.",
+        "Open criticism can help identify and address underlying societal problems.",
+        "Political stability is more important than democratic participation."
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "Arrange the following sentences in the most logical order to form a coherent paragraph. P. As a result, researchers have increasingly emphasized the importance of digital literacy. Q. The rapid growth of online platforms has transformed how information is created and consumed. R. Individuals must now evaluate the credibility of information from a vast number of sources. S. This transformation has brought both opportunities and challenges. T. Misinformation can spread quickly when users fail to verify the accuracy of content.",
+      "options": [
+        "QSRTP",
+        "QRSTP",
+        "QSTRP",
+        "SRQTP"
+      ],
+      "answer": 2
+    }
+  ]
+}
