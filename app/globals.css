@@ -1065,6 +1065,51 @@ details p {
   margin-top: 24px;
 }
 
+.blog-list-block {
+  margin-left: clamp(22px, 6vw, 72px);
+  margin-right: clamp(22px, 6vw, 72px);
+  margin-top: 20px;
+}
+
+.blog-list {
+  color: var(--ink-muted);
+  display: grid;
+  font-size: 18px;
+  gap: 10px;
+  line-height: 1.65;
+  padding-left: 22px;
+}
+
+.blog-list-unordered {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-list-unordered li {
+  padding-left: 24px;
+  position: relative;
+}
+
+.blog-list-unordered li::before {
+  background: var(--contrast-primary);
+  border-radius: 99px;
+  content: "";
+  height: 7px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 7px;
+}
+
+.blog-list-ordered {
+  list-style: decimal;
+}
+
+.blog-list-ordered li::marker {
+  color: var(--contrast-primary);
+  font-weight: 800;
+}
+
 .image-frame {
   background: #edf6f2;
   border: 1px solid var(--line);

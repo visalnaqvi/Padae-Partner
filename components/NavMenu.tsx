@@ -8,7 +8,9 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/cuet-ug-2027-coaching", label: "CUET UG Coaching" },
-  { href: "/blog", label: "Blog & Resources" },
+  { href: "/blog", label: "Blog" },
+  { href: "/announcement", label: "Announcements" },
+  { href: "/latest-updates", label: "Latest Updates" },
 ];
 
 export default function NavMenu() {

@@ -6,6 +6,7 @@ import Heading from "./Heading";
 import Hero from "./Hero";
 import ImageBlock from "./ImageBlock";
 import LeadForm from "./LeadForm";
+import ListBlock from "./ListBlock";
 import Paragraph from "./Paragraph";
 import SubHeading from "./SubHeading";
 import TableBlock from "./TableBlock";
@@ -15,6 +16,7 @@ const componentMap = {
   heading: Heading,
   subheading: SubHeading,
   paragraph: Paragraph,
+  list: ListBlock,
   image: ImageBlock,
   table: TableBlock,
   faq: FAQBlock,

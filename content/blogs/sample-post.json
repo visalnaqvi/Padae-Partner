@@ -20,6 +20,32 @@
       "content": "Important Section"
     },
     {
+      "type": "subheading",
+      "content": "A Sub-section Heading"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "First bullet point — use for feature lists or key facts",
+        "Second bullet point",
+        "Third bullet point"
+      ]
+    },
+    {
+      "type": "subheading",
+      "content": "Step-by-step Example"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "First step — use ordered lists for sequences or rankings",
+        "Second step",
+        "Third step"
+      ]
+    },
+    {
       "type": "image",
       "src": "/images/example.jpg",
       "alt": "Example Image"
@@ -42,7 +68,7 @@
       "type": "cta",
       "title": "Apply Now",
       "buttonText": "Contact Us",
-      "buttonUrl": "/contact"
+      "buttonUrl": "#blogs-lead-form"
     },
     {
       "type": "lead_form"

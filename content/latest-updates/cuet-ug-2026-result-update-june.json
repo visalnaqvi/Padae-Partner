@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "slug": "cuet-ug-2026-result-update-june",
+  "seo": {
+    "title": "CUET UG 2026 Result Update: Expected Date, Scorecard & Latest News",
+    "description": "Latest CUET UG 2026 result update. Check expected result date, scorecard details, re-exam impact, and admission timeline."
+  },
+  "blocks": [
+    {
+      "type": "hero",
+      "title": "CUET UG 2026 Result Update",
+      "subtitle": "NTA Expected to Release Results Soon After Completion of Re-Exams"
+    },
+    {
+      "type": "paragraph",
+      "content": "The National Testing Agency (NTA) has not yet announced the CUET UG 2026 result. Following the rescheduled examinations conducted for candidates affected by technical issues, the result declaration process is currently underway. Students across India are eagerly waiting for the release of their scorecards and admission counselling schedules."
+    },
+    {
+      "type": "image",
+      "src": "/blogs-asset/cuet-ug-2026-result-update.png",
+      "alt": "CUET UG 2026 Result Update"
+    },
+    {
+      "type": "heading",
+      "content": "Latest CUET UG 2026 Result Status"
+    },
+    {
+      "type": "paragraph",
+      "content": "NTA recently conducted re-examinations for affected candidates. Since the agency must evaluate all answer sheets and complete the normalization process before releasing scores, the result announcement has been delayed slightly compared to initial expectations."
+    },
+    {
+      "type": "heading",
+      "content": "Expected CUET UG 2026 Result Date"
+    },
+    {
+      "type": "paragraph",
+      "content": "Based on the current examination schedule and previous CUET admission timelines, experts expect the CUET UG 2026 result to be announced in the last week of June 2026. However, students should wait for the official confirmation from NTA."
+    },
+    {
+      "type": "heading",
+      "content": "Why Is the Result Taking Longer This Year?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Re-examinations were conducted for affected candidates.",
+        "NTA must evaluate all answer sheets before publishing scores.",
+        "The normalization process requires data from all test sessions.",
+        "Final scorecards are prepared only after quality verification."
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "What Will Be Included in the CUET Scorecard?"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Candidate name and application number",
+        "Subject-wise normalized scores",
+        "Percentile scores",
+        "Category details",
+        "Overall performance summary",
+        "Information required for university admissions"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "What Happens After the Result?"
+    },
+    {
+      "type": "paragraph",
+      "content": "After the declaration of results, participating universities will begin their admission and counselling processes. Students seeking admission to top universities should regularly monitor admission portals and complete registrations as soon as counselling windows open."
+    },
+    {
+      "type": "subheading",
+      "content": "Documents Students Should Keep Ready"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        "CUET UG 2026 Scorecard",
+        "Class 10 Marksheet",
+        "Class 12 Marksheet",
+        "Category Certificate (if applicable)",
+        "Passport-size photographs",
+        "Government-issued ID proof"
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Expected Admission Timeline"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Event",
+        "Expected Timeline"
+      ],
+      "rows": [
+        [
+          "CUET UG Result",
+          "Last Week of June 2026"
+        ],
+        [
+          "University Registration",
+          "June–July 2026"
+        ],
+        [
+          "Counselling Process",
+          "July 2026"
+        ],
+        [
+          "First Admission Lists",
+          "July–August 2026"
+        ]
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "Has NTA released the CUET UG 2026 result?",
+          "answer": "No. As of now, NTA has not officially announced the CUET UG 2026 result."
+        },
+        {
+          "question": "Why has the CUET UG 2026 result been delayed?",
+          "answer": "The delay is mainly due to the rescheduled examinations conducted for candidates affected by technical issues."
+        },
+        {
+          "question": "When is the CUET UG 2026 result expected?",
+          "answer": "The result is expected in the last week of June 2026, subject to official confirmation by NTA."
+        },
+        {
+          "question": "What should students do while waiting for the result?",
+          "answer": "Students should prepare admission documents and monitor university admission portals for registration announcements."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "title": "Need Help With CUET Admissions?",
+      "buttonText": "Talk to Our Experts",
+      "buttonUrl": "#blogs-lead-form"
+    },
+    {
+      "type": "lead_form"
+    }
+  ]
+}
