@@ -732,10 +732,6 @@ details p {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 18px 42px #10212b12;
-  display: grid;
-  gap: 16px;
-  margin-top: 34px;
-  padding: 26px;
 }
 
 .lead-form .sub-headings {
@@ -1074,7 +1070,6 @@ details p {
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
-  padding: 8px;
 }
 
 .content-image img {
@@ -1190,7 +1185,6 @@ details p {
 .lead-form form {
   display: grid;
   gap: 18px;
-  margin-top: 22px;
 }
 
 .lead-form label {
