@@ -1,7 +1,6 @@
-"use client";
-
+"use client"
 import { useEffect, useMemo, useState } from "react";
-import LandingIcon from "./LandingIcon";
+import ClockIcon from "@/components/icons/ClockIcon";
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -50,7 +49,7 @@ export default function OfferTimer({ compact = false }) {
     <div className={`lp-offer-timer ${compact ? "lp-offer-timer-compact" : ""}`}>
       <div className="lp-offer-top">
         <div className="lp-offer-icon">
-          <LandingIcon name="clock" />
+          <ClockIcon aria-hidden="true" />
         </div>
         <div className="lp-offer-copy">
           <span className="lp-offer-label">

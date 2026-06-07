@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useEffect, useRef, useState } from "react";
 
 const OPTION_LETTERS = ["A", "B", "C", "D"];

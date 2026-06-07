@@ -1,27 +1,23 @@
-"use client";
-
-import {
-  CheckCircleOutlined,
-  ReadOutlined,
-  SafetyCertificateOutlined,
-} from "@ant-design/icons";
-import { Tag } from "antd";
+import ReadIcon from "@/components/icons/ReadIcon";
+import SafetyCertificateIcon from "@/components/icons/SafetyCertificateIcon";
+import CheckCircleOutlineIcon from "@/components/icons/CheckCircleOutlineIcon";
 
 export default function Hero({ title, subtitle, label = "Study Guide" }) {
   return (
     <section className="hero blog-hero">
       <div className="hero-content">
-        <Tag className="blog-kicker" icon={<ReadOutlined />}>
+        <span className="blog-kicker">
+          <ReadIcon />
           {label}
-        </Tag>
+        </span>
         <h1>{title}</h1>
         {subtitle ? <p>{subtitle}</p> : null}
         <div className="blog-hero-trust">
           <span>
-            <SafetyCertificateOutlined /> Editor reviewed
+            <SafetyCertificateIcon /> Editor reviewed
           </span>
           <span>
-            <CheckCircleOutlined /> Clear action steps
+            <CheckCircleOutlineIcon /> Clear action steps
           </span>
         </div>
       </div>

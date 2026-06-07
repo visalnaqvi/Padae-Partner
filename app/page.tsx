@@ -1,5 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
+import { getAllLatestUpdates } from "@/lib/latest-updates";
+import { getAllAnnouncements } from "@/lib/announcements";
+import { getAllCategories } from "@/lib/mock-tests";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://padaepartner.com";
 
@@ -47,6 +51,21 @@ export const metadata: Metadata = {
   },
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getItemTitle(item: any): string {
+  if (item.seo?.title) return item.seo.title;
+  const hero = item.blocks?.find((b: any) => b.type === "hero");
+  return hero?.title || (item.slug as string).replace(/-/g, " ");
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getItemDesc(item: any): string {
+  if (item.seo?.description) return item.seo.description;
+  const para = item.blocks?.find((b: any) => b.type === "paragraph");
+  const text: string = para?.content || "";
+  return text.length > 160 ? text.slice(0, 160) + "…" : text;
+}
+
 const heroPoints = [
   "Live Online & Offline CUET Classes",
   "CUET Mock Tests & Previous Year Questions",
@@ -76,7 +95,7 @@ const offerings = [
     title: "Mock Tests & PYQs",
     desc: "Topic-wise tests, full-length CUET mock tests, and previous year question banks to sharpen speed, accuracy, and exam readiness before the real exam.",
     cta: "View Mock Tests",
-    href: "/cuet-ug-2027-coaching#course-plans",
+    href: "/mock-tests",
     badge: null,
     featured: false,
   },
@@ -181,7 +200,11 @@ const websiteSchema = {
   url: siteUrl,
 };
 
-export default function Home() {
+export default async function Home() {
+  const latestUpdates = getAllLatestUpdates().slice(0, 3);
+  const announcements = getAllAnnouncements().slice(0, 3);
+  const mockTestCategories = getAllCategories();
+
   return (
     <main className="home-page">
       <script
@@ -262,6 +285,43 @@ export default function Home() {
         ))}
       </section>
 
+      {/* ===== MOCK TEST PROMO ===== */}
+      <section className="hp-mock-promo" aria-label="CUET Mock Test landing">
+        <div className="hp-mock-promo-content">
+          <p className="hp-mock-promo-eyebrow">Free Practice Tests</p>
+          <h2 className="hp-mock-promo-headline">
+            Crack CUET 2027 with Full-Length Mock Tests &amp; Detailed Performance Analysis
+          </h2>
+          <p className="hp-mock-promo-sub">
+            Practice real exam-level questions, get instant scores, view detailed solutions,
+            analyze weak topics, and improve your CUET percentile before the actual exam.
+          </p>
+          <ul className="hp-mock-promo-features">
+            <li>Timed full-length CUET mock tests</li>
+            <li>Instant scoring with negative marking</li>
+            <li>Detailed solutions for every question</li>
+            <li>Weak topic analysis &amp; performance insights</li>
+          </ul>
+          <div className="hp-mock-promo-actions">
+            <Link className="hp-mock-promo-btn-primary" href="/mock-tests/details">
+              Start Free Mock Test
+            </Link>
+            <Link className="hp-mock-promo-btn-secondary" href="/mock-tests">
+              Browse All Tests
+            </Link>
+          </div>
+        </div>
+        <div className="hp-mock-promo-visual" aria-hidden="true">
+          <Image
+            src="/mock_test_landing.png"
+            alt="Student taking CUET mock test with score and analysis"
+            width={520}
+            height={440}
+            className="hp-mock-promo-img"
+          />
+        </div>
+      </section>
+
       {/* ===== OFFERINGS ===== */}
       <section className="home-section hp-offerings-section" id="offerings">
         <div className="section-heading">
@@ -290,6 +350,44 @@ export default function Home() {
               </Link>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* ===== MOCK TESTS ===== */}
+      <section className="home-section hp-mock-section" aria-label="CUET mock tests">
+        <div className="section-heading">
+          <p className="eyebrow hp-eyebrow-light">Practice Tests</p>
+          <h2 className="hp-heading-light">Free CUET Mock Tests</h2>
+          <p className="hp-section-sub hp-mock-sub">
+            Timed, fully-scored practice tests across all CUET domains. Attempt a
+            test, see your score instantly, and review every answer — completely free.
+          </p>
+        </div>
+
+        {mockTestCategories.length === 0 ? (
+          <p className="hp-mock-empty">Mock tests coming soon.</p>
+        ) : (
+          <div className="hp-mock-grid">
+            {mockTestCategories.map((cat) => (
+              <Link className="hp-mock-cat-card" href={cat.href} key={cat.slug}>
+                <div className="hp-mock-cat-body">
+                  <p className="hp-mock-cat-name">{cat.label}</p>
+                  <p className="hp-mock-cat-count">
+                    {cat.subcategoryCount > 0
+                      ? `${cat.subcategoryCount} sub-categor${cat.subcategoryCount === 1 ? "y" : "ies"}`
+                      : `${cat.testCount} test${cat.testCount !== 1 ? "s" : ""}`}
+                  </p>
+                </div>
+                <span className="hp-mock-cat-arrow" aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <div className="hp-section-cta">
+          <Link className="primary-link hp-mock-cta" href="/mock-tests">
+            View All Mock Tests
+          </Link>
         </div>
       </section>
 
@@ -346,6 +444,77 @@ export default function Home() {
           <Link className="secondary-link" href="/blog">
             Browse All Resources
           </Link>
+        </div>
+      </section>
+
+      {/* ===== STAY UPDATED ===== */}
+      <section className="home-section hp-stay-section" aria-label="Latest updates and announcements">
+        <div className="section-heading">
+          <p className="eyebrow">Stay Informed</p>
+          <h2>Latest Updates & Announcements</h2>
+          <p className="hp-section-sub">
+            CUET exam news, result updates, admission dates, and coaching
+            announcements — all in one place.
+          </p>
+        </div>
+
+        <div className="hp-stay-cols">
+          {/* Latest Updates column */}
+          <div className="hp-stay-col">
+            <div className="hp-stay-col-header">
+              <h3>Latest Updates</h3>
+              <Link className="hp-stay-view-all" href="/latest-updates">
+                View All →
+              </Link>
+            </div>
+            {latestUpdates.length === 0 ? (
+              <p className="hp-stay-empty">No updates yet. Check back soon.</p>
+            ) : (
+              <div className="hp-stay-list">
+                {latestUpdates.map((item) => (
+                  <Link className="hp-stay-item" href={item.href} key={item.slug}>
+                    <div className="hp-stay-item-body">
+                      <p className="hp-stay-item-title">{getItemTitle(item)}</p>
+                      {getItemDesc(item) && (
+                        <p className="hp-stay-item-desc">{getItemDesc(item)}</p>
+                      )}
+                    </div>
+                    <span className="hp-stay-item-arrow" aria-hidden="true">→</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Announcements column */}
+          <div className="hp-stay-col">
+            <div className="hp-stay-col-header">
+              <h3>Announcements</h3>
+              <Link className="hp-stay-view-all" href="/announcement">
+                View All →
+              </Link>
+            </div>
+            {announcements.length === 0 ? (
+              <div className="hp-stay-empty-state">
+                <span className="hp-stay-empty-icon" aria-hidden="true">📢</span>
+                <p>No announcements yet. Check back soon.</p>
+              </div>
+            ) : (
+              <div className="hp-stay-list">
+                {announcements.map((item) => (
+                  <Link className="hp-stay-item" href={item.href} key={item.slug}>
+                    <div className="hp-stay-item-body">
+                      <p className="hp-stay-item-title">{getItemTitle(item)}</p>
+                      {getItemDesc(item) && (
+                        <p className="hp-stay-item-desc">{getItemDesc(item)}</p>
+                      )}
+                    </div>
+                    <span className="hp-stay-item-arrow" aria-hidden="true">→</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

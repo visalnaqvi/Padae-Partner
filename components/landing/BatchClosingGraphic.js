@@ -1,21 +1,13 @@
-"use client";
+""
 
-import { useEffect, useMemo, useState } from "react";
-import LandingIcon from "./LandingIcon";
+import { useMemo } from "react";
+import CalendarIcon from "@/components/icons/CalendarIcon";
+import ClockIcon from "@/components/icons/ClockIcon";
 import { getBatchClosingDetails } from "./OfferTimer";
 
 export default function BatchClosingGraphic() {
-  const [now, setNow] = useState(() => new Date());
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setNow(new Date());
-    }, 30000);
-
-    return () => window.clearInterval(timer);
-  }, []);
-
-  const details = useMemo(() => getBatchClosingDetails(now), [now]);
+  const details = useMemo(() => getBatchClosingDetails(), []);
 
   return (
     <div className="lp-seat-graphic" aria-label={`${details.seatsLeft} seats remaining. Batch closes on ${details.closingDateLabel}.`}>
@@ -41,11 +33,11 @@ export default function BatchClosingGraphic() {
       </div>
       <div className="lp-seat-deadline">
         <span>
-          <LandingIcon name="calendar" />
+          <CalendarIcon aria-hidden="true" />
           Friday deadline
         </span>
         <span>
-          <LandingIcon name="clock" />
+          <ClockIcon aria-hidden="true" />
           Live countdown
         </span>
       </div>

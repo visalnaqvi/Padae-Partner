@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useState } from "react";
 import MockTestPlayer from "./MockTestPlayer";
 import MockTestResult from "./MockTestResult";

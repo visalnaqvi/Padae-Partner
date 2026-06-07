@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "biology-question-paper-1",
+  "title": "CUET 2026 Biology Mock Test 1",
+  "description": "Memory-based CUET 2026 June 6 Shift 1 Biology question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Match List I with List II. P. Ribosome, Q. Histone, R. DNA polymerase, S. RNA polymerase. List II: (i) Replication, (ii) Transcription, (iii) Translation, (iv) Nucleosome.",
+      "options": [
+        "P-(i), Q-(ii), R-(iii), S-(iv)",
+        "P-(ii), Q-(i), R-(iii), S-(iv)",
+        "P-(i), Q-(ii), R-(iv), S-(iii)",
+        "P-(iii), Q-(iv), R-(i), S-(ii)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 2,
+      "question": "Identify the statements true for RNA. (i) RNA acts as a genetic material for some viruses. (ii) RNA also functions as an adapter molecule. (iii) RNA has hexose sugar as its backbone. (iv) RNA also acts as catalyst in some cases.",
+      "options": [
+        "(i), (ii) and (iii) only",
+        "(i), (ii) and (iv) only",
+        "(ii), (iii) and (iv) only",
+        "(i), (iii) and (iv) only"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is not a Mendelian Disorder?",
+      "options": [
+        "Haemophilia",
+        "Sickle-cell anaemia",
+        "Down’s Syndrome",
+        "Phenylketonuria"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "Arrange Griffith’s experiment in the correct sequence. (i) S strain injected → mice died (ii) Heat-killed S strain → mice lived (iii) R strain injected → mice lived (iv) Heat-killed S + R strain → mice died",
+      "options": [
+        "(i), (ii), (iii), (iv)",
+        "(ii), (i), (iii), (iv)",
+        "(ii), (iii), (iv), (i)",
+        "(i), (iii), (ii), (iv)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 5,
+      "question": "Match List I with List II (Contraception). P. Lippes loop, Q. Vaults, R. Periodic abstinence, S. Progestasert. List II: (i) Barrier, (ii) Hormone releasing device, (iii) Non-medicated IUDs, (iv) Natural method.",
+      "options": [
+        "P-(i), Q-(iii), R-(iv), S-(ii)",
+        "P-(iii), Q-(ii), R-(iv), S-(i)",
+        "P-(iii), Q-(i), R-(iv), S-(ii)",
+        "P-(iii), Q-(i), R-(ii), S-(iv)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "Arrange the following stages of development of a dicot embryo in the order of their occurrence. (i) Formation of heart-shaped embryo (ii) Formation of typical dicot embryo (iii) Formation of zygote (iv) Formation of globular embryo",
+      "options": [
+        "(i), (ii), (iii), (iv)",
+        "(iii), (iv), (i), (ii)",
+        "(iii), (i), (ii), (iv)",
+        "(iv), (i), (ii), (iii)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "Ribozyme is:",
+      "options": [
+        "23S rRNA",
+        "28S rRNA",
+        "18S rRNA",
+        "5.8S rRNA"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 8,
+      "question": "Match List I with List II. P. Polyembryony, Q. Parthenocarpy, R. False Fruit, S. Embryo Sac. List II: (i) Apple, (ii) Female gametophyte, (iii) Orange, (iv) Banana.",
+      "options": [
+        "P-(iii), Q-(i), R-(ii), S-(iv)",
+        "P-(iii), Q-(iv), R-(i), S-(ii)",
+        "P-(i), Q-(iv), R-(iii), S-(ii)",
+        "P-(iii), Q-(iv), R-(ii), S-(i)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "Select the correct statements regarding the menstrual cycle in human females. (i) First menstruation begins at puberty and is called menopause. (ii) Ovulation occurs around day 14 when progesterone is maximum. (iii) In absence of fertilisation, corpus luteum degenerates causing menstruation. (iv) Menstrual cycle ceases around 50 years of age.",
+      "options": [
+        "(i) and (ii) only",
+        "(ii) and (iv) only",
+        "(i) and (iii) only",
+        "(iii) and (iv) only"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 10,
+      "question": "In DNA, N-glycosidic linkage is present between:",
+      "options": [
+        "Pentose sugar and phosphate group",
+        "Nitrogenous base and pentose sugar",
+        "Two nitrogenous bases",
+        "Two pentose sugars"
+      ],
+      "answer": 1
+    }
+  ]
+}

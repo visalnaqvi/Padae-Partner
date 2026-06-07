@@ -1,7 +1,5 @@
-"use client";
-
-import { PhoneFilled, WhatsAppOutlined } from "@ant-design/icons";
-
+import WhatsAppOutlined from "../icons/WhatsAppOutlined";
+import PhoneFilled from "../icons/PhoneFilled";
 export default function StickyActions() {
   const phone = "+919999999999";
   const whatsappText = encodeURIComponent("Hi, I want to book my CUET UG 2027 seat.");

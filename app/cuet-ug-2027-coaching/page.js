@@ -5,6 +5,18 @@ import BatchClosingGraphic from "@/components/landing/BatchClosingGraphic";
 import FAQAccordion from "@/components/landing/FAQAccordion";
 import HeroPointList from "@/components/landing/HeroPointList";
 import StickyActions from "@/components/landing/StickyActions";
+import PlayCircleIcon from "@/components/icons/PlayCircleIcon";
+import CheckCircleOutlineIcon from "@/components/icons/CheckCircleOutlineIcon";
+import MessageIcon from "@/components/icons/MessageIcon";
+import BookIcon from "@/components/icons/BookIcon";
+import BankIcon from "@/components/icons/BankIcon";
+import TeamIcon from "@/components/icons/TeamIcon";
+import CalendarIcon from "@/components/icons/CalendarIcon";
+import FileSearchIcon from "@/components/icons/FileSearchIcon";
+import SolutionIcon from "@/components/icons/SolutionIcon";
+import BarChartIcon from "@/components/icons/BarChartIcon";
+import TrophyIcon from "@/components/icons/TrophyIcon";
+import ReadIcon from "@/components/icons/ReadIcon";
 import "./cuet-ug.css";
 
 const pageUrl = "/cuet-ug-2027-coaching";
@@ -75,11 +87,11 @@ export function generateMetadata() {
 }
 
 const heroPoints = [
-  ["CUET UG Online Coaching", "play"],
-  ["CUET Mock Tests", "check"],
-  ["Doubt Sessions", "message"],
-  ["Previous Year Questions", "book"],
-  ["University Admission Counseling", "bank"],
+  ["CUET UG Online Coaching", PlayCircleIcon],
+  ["CUET Mock Tests", CheckCircleOutlineIcon],
+  ["Doubt Sessions", MessageIcon],
+  ["Previous Year Questions", BookIcon],
+  ["University Admission Counseling", BankIcon],
 ];
 
 const heroStats = [
@@ -90,35 +102,35 @@ const heroStats = [
 ];
 
 const trustCards = [
-  ["Experienced CUET Faculty", "Learn from mentors who understand CUET UG patterns, board overlap, and university admission strategy.", "team"],
-  ["Structured CUET Study Plan", "Follow a weekly CUET preparation plan designed to cover concepts, revision, tests, and counseling milestones.", "calendar"],
-  ["Regular CUET Testing", "Measure readiness with topic tests, full-length CUET mock tests, and exam-style practice.", "fileSearch"],
-  ["Personalized Admission Guidance", "Get help choosing CUET subjects, target courses, and university preferences.", "solution"],
+  ["Experienced CUET Faculty", "Learn from mentors who understand CUET UG patterns, board overlap, and university admission strategy.", TeamIcon],
+  ["Structured CUET Study Plan", "Follow a weekly CUET preparation plan designed to cover concepts, revision, tests, and counseling milestones.", CalendarIcon],
+  ["Regular CUET Testing", "Measure readiness with topic tests, full-length CUET mock tests, and exam-style practice.", FileSearchIcon],
+  ["Personalized Admission Guidance", "Get help choosing CUET subjects, target courses, and university preferences.", SolutionIcon],
 ];
 
 const whyMatters = [
-  ["Competition is increasing", "More students are targeting CUET every year, making early preparation and test familiarity important.", "barChart"],
-  ["Top universities admit through CUET", "CUET scores are a key pathway for Delhi University, BHU, JMI, AMU, and other leading universities.", "bank"],
-  ["Preparation improves chances", "A guided plan helps students avoid random study, identify weak areas, and improve admission options.", "trophy"],
+  ["Competition is increasing", "More students are targeting CUET every year, making early preparation and test familiarity important.", BarChartIcon],
+  ["Top universities admit through CUET", "CUET scores are a key pathway for Delhi University, BHU, JMI, AMU, and other leading universities.", BankIcon],
+  ["Preparation improves chances", "A guided plan helps students avoid random study, identify weak areas, and improve admission options.", TrophyIcon],
 ];
 
 const benefits = [
-  ["Expert CUET Mentors", "Subject experts simplify concepts and keep preparation focused on CUET UG requirements.", "team"],
-  ["Weekly CUET Mock Tests", "Frequent CUET mock test practice builds speed, accuracy, and confidence before the real exam.", "fileSearch"],
-  ["Performance Tracking", "Reports show strengths, weak topics, and the next actions to improve scores.", "barChart"],
-  ["Doubt Solving", "Dedicated doubt support helps students stay consistent instead of getting stuck.", "message"],
-  ["Admission Counseling", "Counselors guide course selection, university targeting, and preference planning.", "solution"],
-  ["CUET Study Material", "Access concise notes, CUET PYQs, topic worksheets, and revision resources.", "book"],
+  ["Expert CUET Mentors", "Subject experts simplify concepts and keep preparation focused on CUET UG requirements.", TeamIcon],
+  ["Weekly CUET Mock Tests", "Frequent CUET mock test practice builds speed, accuracy, and confidence before the real exam.", FileSearchIcon],
+  ["Performance Tracking", "Reports show strengths, weak topics, and the next actions to improve scores.", BarChartIcon],
+  ["Doubt Solving", "Dedicated doubt support helps students stay consistent instead of getting stuck.", MessageIcon],
+  ["Admission Counseling", "Counselors guide course selection, university targeting, and preference planning.", SolutionIcon],
+  ["CUET Study Material", "Access concise notes, CUET PYQs, topic worksheets, and revision resources.", BookIcon],
 ];
 
 const features = [
-  ["Live Interactive Classes", "Attend concept-first CUET classes with active practice and exam discussion.", "play"],
-  ["Recorded Sessions", "Revise missed or difficult topics anytime with organized class recordings.", "read"],
-  ["Topic Wise Tests", "Practice after every unit to strengthen accuracy before moving ahead.", "check"],
-  ["Full Length Mock Tests", "Experience real exam timing, section strategy, and pressure management.", "fileSearch"],
-  ["Previous Year Questions", "Understand repeated concepts and the style of CUET UG questions.", "book"],
-  ["Performance Reports", "Track score trends, attempted questions, accuracy, and improvement areas.", "barChart"],
-  ["Counseling Support", "Get admission guidance from preparation through university preference filling.", "solution"],
+  ["Live Interactive Classes", "Attend concept-first CUET classes with active practice and exam discussion.", PlayCircleIcon],
+  ["Recorded Sessions", "Revise missed or difficult topics anytime with organized class recordings.", ReadIcon],
+  ["Topic Wise Tests", "Practice after every unit to strengthen accuracy before moving ahead.", CheckCircleOutlineIcon],
+  ["Full Length Mock Tests", "Experience real exam timing, section strategy, and pressure management.", FileSearchIcon],
+  ["Previous Year Questions", "Understand repeated concepts and the style of CUET UG questions.", BookIcon],
+  ["Performance Reports", "Track score trends, attempted questions, accuracy, and improvement areas.", BarChartIcon],
+  ["Counseling Support", "Get admission guidance from preparation through university preference filling.", SolutionIcon],
 ];
 
 const universities = ["Delhi University", "BHU", "JMI", "AMU", "Other Top Universities"];

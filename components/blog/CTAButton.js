@@ -1,7 +1,6 @@
-"use client";
-
-import { ArrowRightOutlined, SafetyCertificateOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
+import SafetyCertificateIcon from "@/components/icons/SafetyCertificateIcon";
 
 export default function CTAButton({
   title,
@@ -13,14 +12,14 @@ export default function CTAButton({
     <section className="cta-section">
       <div>
         <span className="section-eyebrow">
-          <SafetyCertificateOutlined /> Trusted guidance
+          <SafetyCertificateIcon /> Trusted guidance
         </span>
         {title ? <h2 className="sub-headings">{title}</h2> : null}
         {description ? <p>{description}</p> : null}
       </div>
       {buttonUrl && buttonText ? (
         <Link className="cta-link-button" href={buttonUrl}>
-          <ArrowRightOutlined />
+          <ArrowRightIcon />
           <span>{buttonText}</span>
         </Link>
       ) : null}

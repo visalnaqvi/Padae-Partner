@@ -1,28 +1,24 @@
-"use client";
-
-import { QuestionCircleOutlined } from "@ant-design/icons";
-import { Collapse } from "antd";
+import QuestionCircleIcon from "@/components/icons/QuestionCircleIcon";
 
 export default function FAQBlock({ items = [], title = "Frequently Asked Questions" }) {
   if (!items.length) {
     return null;
   }
 
-  const collapseItems = items.map((item) => ({
-    key: item.question,
-    label: (
-      <span className="faq-question">
-        <QuestionCircleOutlined />
-        {item.question}
-      </span>
-    ),
-    children: <p>{item.answer}</p>,
-  }));
-
   return (
     <section className="faq-block">
       <h2 className="sub-headings">{title}</h2>
-      <Collapse className="blog-collapse" items={collapseItems} />
+      <div className="blog-faq-list">
+        {items.map((item) => (
+          <details className="blog-faq-item" key={item.question}>
+            <summary className="faq-question">
+              <QuestionCircleIcon />
+              {item.question}
+            </summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
     </section>
   );
 }

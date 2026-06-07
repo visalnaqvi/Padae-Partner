@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useId, useRef, useState } from "react";
 import { RecaptchaVerifier, signInWithPhoneNumber, signOut } from "firebase/auth";
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore";

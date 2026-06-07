@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "chemistry-question-paper-2",
+  "title": "CUET 2026 Chemistry Mock Test 2",
+  "description": "Memory-based CUET 2026 June 6 Shift 1 Chemistry question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "The number of geometrical isomers possible for the complex [Co(en)2Cl2]+ is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "question": "Which of the following compounds exhibits the maximum hydrogen bonding in the liquid state?",
+      "options": [
+        "CH3OH",
+        "HF",
+        "H2O",
+        "NH3"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 3,
+      "question": "The value of pH for a 10⁻⁸ M HCl solution at 25°C is closest to:",
+      "options": [
+        "8",
+        "7",
+        "6.98",
+        "6"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "The incorrect statement regarding d-block elements is:",
+      "options": [
+        "Zinc is a transition element",
+        "Most transition metals exhibit variable oxidation states",
+        "Transition metals generally form coloured ions",
+        "Transition metals frequently form complexes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "question": "A first-order reaction has a half-life of 20 minutes. The time required for 87.5% completion of the reaction is:",
+      "options": [
+        "40 min",
+        "60 min",
+        "80 min",
+        "100 min"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "Among the following species, which one has the highest bond order according to Molecular Orbital Theory?",
+      "options": [
+        "O₂",
+        "O₂⁺",
+        "O₂⁻",
+        "O₂²⁻"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "The major product obtained when phenol is treated with bromine water is:",
+      "options": [
+        "Bromobenzene",
+        "o-Bromophenol",
+        "p-Bromophenol",
+        "2,4,6-Tribromophenol"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 8,
+      "question": "The standard electrode potentials are E°(Cu²⁺/Cu) = +0.34 V and E°(Zn²⁺/Zn) = −0.76 V. The standard emf of the Daniell cell is:",
+      "options": [
+        "0.42 V",
+        "0.76 V",
+        "1.10 V",
+        "1.52 V"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 9,
+      "question": "The number of stereoisomers possible for the compound CH₃CH(OH)CH(OH)CH₃ is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 10,
+      "question": "The correct order of acidic strength is:",
+      "options": [
+        "CH₃COOH > ClCH₂COOH > Cl₂CHCOOH > Cl₃CCOOH",
+        "ClCH₂COOH > CH₃COOH > Cl₂CHCOOH > Cl₃CCOOH",
+        "Cl₃CCOOH > Cl₂CHCOOH > ClCH₂COOH > CH₃COOH",
+        "Cl₂CHCOOH > Cl₃CCOOH > ClCH₂COOH > CH₃COOH"
+      ],
+      "answer": 2
+    }
+  ]
+}

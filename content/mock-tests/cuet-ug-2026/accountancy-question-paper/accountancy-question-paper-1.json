@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "accountancy-question-paper-1",
+  "title": "CUET 2026 Accountancy Mock Test 1",
+  "description": "Memory-based CUET 2026 June 6 Shift 1 Accountancy question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "If a company fails to receive minimum subscription within 120 days from the date of issue of the prospectus, in how many days should the company refund the amount of application money from the date of issue of prospectus?",
+      "options": [
+        "150 days",
+        "230 days",
+        "130 days",
+        "120 days"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "Ram, Manohar and Joshi were partners. Joshi died on 28 Feb 2018. His share of profit is calculated on average of 3 years profits. Find Joshi’s share. Profits: 2015 = 8000, 2016 = 9000, 2017 = 10000.",
+      "options": [
+        "500",
+        "3000",
+        "4500",
+        "2750"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 3,
+      "question": "Sarvesh, Sriniketan and Srinivas are partners in ratio 5:3:2. If Sriniketan’s share of profit is ₹1,50,000, find Sarvesh’s share.",
+      "options": [
+        "₹5,00,000",
+        "₹1,50,000",
+        "₹3,00,000",
+        "₹2,50,000"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 4,
+      "question": "On dissolution, furniture having a book value of ₹5,000 is taken over at ₹4,300. Which account is debited?",
+      "options": [
+        "Cash Account ₹5,000",
+        "Realisation Account ₹700",
+        "Partner’s Capital Account ₹5,000",
+        "Realisation Account ₹4,300"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 5,
+      "question": "Final payment: Capital debit ₹50,000, profit ₹1,00,000, liability taken over ₹8,000. Find the payment.",
+      "options": [
+        "₹32,000",
+        "₹58,000",
+        "₹42,000",
+        "₹52,000"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "In the books of a partnership firm maintaining fluctuating capital accounts, which of the following appropriations or adjustments would result in a credit to the Partners’ Current Accounts?",
+      "options": [
+        "Interest allowed on partners’ capitals",
+        "Remuneration, salary or commission payable to partners",
+        "Share of divisible profits transferred to partners",
+        "All of the above items"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 7,
+      "question": "Under Section 37 of the Indian Partnership Act, 1932, what is the right of an outgoing partner if the amount remains unpaid?",
+      "options": [
+        "Interest @ 12% only",
+        "Interest @ 6% or share of profits attributable",
+        "Only share in profits",
+        "No interest or profit"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "At the time of death of a partner, the balance of Investment Fluctuation Reserve after adjusting fall in investment value is treated as:",
+      "options": [
+        "Credited to Revaluation Account",
+        "Credited to all partners’ capital accounts",
+        "Debited to deceased partner",
+        "Credited to deceased partner"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "When partners decide not to revalue assets and liabilities at the time of death of a partner, Deceased Partner’s Capital Account is credited with revaluation gain and Gaining Partners’ Capital Accounts are adjusted in:",
+      "options": [
+        "Old ratio",
+        "Sacrificing ratio",
+        "Gaining ratio",
+        "New profit-sharing ratio"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "If a partner withdraws equal amounts at the beginning of each quarter, what average period should be considered for interest on total drawings?",
+      "options": [
+        "5.5 months",
+        "6 months",
+        "4.5 months",
+        "7.5 months"
+      ],
+      "answer": 1
+    }
+  ]
+}
