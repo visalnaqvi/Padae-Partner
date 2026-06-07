@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "chemistry-question-paper-1",
+  "title": "CUET 2026 Chemistry Mock Test 1",
+  "description": "Memory-based CUET 2026 May 31 Shift 2 Chemistry question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "A compound A having molecular formula C7H8O gives a violet colour with neutral FeCl3. On treatment with excess CH3I/K2CO3, it forms compound B. Ozonolysis of B followed by reductive workup (Zn/H2O) gives one mole of methanal and one mole of anisaldehyde. The number of phenolic compounds among A, B, and the ozonolysis products is:",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "question": "Aldehyde A undergoes Cannizzaro reaction to give compounds B and C. Compound B on oxidation gives benzoic acid. Compound C gives positive iodoform test after suitable oxidation. Compound A is:",
+      "options": [
+        "Benzaldehyde",
+        "Formaldehyde",
+        "Acetaldehyde",
+        "Propanal"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 3,
+      "question": "The molar conductivity of CH3COOH at a certain concentration is 39.0 Ω⁻¹ cm² mol⁻¹. Given that the limiting molar conductivities are Λ°m(HCl) = 426.0 Ω⁻¹ cm² mol⁻¹, Λ°m(CH3COONa) = 91.0 Ω⁻¹ cm² mol⁻¹ and Λ°m(NaCl) = 126.0 Ω⁻¹ cm² mol⁻¹. The degree of dissociation of acetic acid at this concentration is:",
+      "options": [
+        "0.25",
+        "0.40",
+        "0.50",
+        "0.60"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "For the cell reaction Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s), the standard cell potential is 1.10 V. If [Zn²⁺] = 0.10 M and [Cu²⁺] = 1.0 × 10⁻³ M at 298 K, the cell potential is closest to:",
+      "options": [
+        "0.98 V",
+        "1.04 V",
+        "1.16 V",
+        "1.22 V"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 5,
+      "question": "A first-order reaction has a rate constant of 2.0 × 10⁻³ s⁻¹ at 300 K and 8.0 × 10⁻³ s⁻¹ at 330 K. Assuming the Arrhenius equation to be valid, the activation energy of the reaction is closest to:",
+      "options": [
+        "28.5 kJ mol⁻¹",
+        "38.0 kJ mol⁻¹",
+        "57.0 kJ mol⁻¹",
+        "76.0 kJ mol⁻¹"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "A coordination compound has the formula [Co(NH3)4Cl2]Cl. The magnetic moment of the complex is found to be approximately 4.9 BM. The hybridization and geometry of the complex ion are respectively:",
+      "options": [
+        "dsp², square planar",
+        "sp³, tetrahedral",
+        "d²sp³, octahedral",
+        "sp³d², octahedral"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 7,
+      "question": "EDTA forms a stable complex with a metal ion M³⁺. The complex formed is octahedral and represented as [M(EDTA)]⁻. Which of the following statements is correct?",
+      "options": [
+        "EDTA acts as a tetradentate ligand and the complex shows geometrical isomerism only",
+        "EDTA acts as a hexadentate ligand and the complex can show optical isomerism",
+        "EDTA acts as a bidentate ligand and the complex shows linkage isomerism",
+        "EDTA acts as a monodentate ligand and the complex is tetrahedral"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Which of the following statements regarding lanthanoids is correct?",
+      "options": [
+        "Basicity of lanthanoid hydroxides increases from La(OH)3 to Lu(OH)3",
+        "Lanthanoid contraction occurs because of poor shielding by 4f-electrons",
+        "Ce⁴⁺ is less stable than Ce³⁺ because of its noble gas configuration",
+        "Atomic size increases regularly from La to Lu"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "Phenol is subjected to the following sequence of reactions: Phenol →(NaOH, CO₂) A →(H⁺) B →(Conc. HCl, Zn(Hg)) C →(NH₂NH₂/KOH, Δ) D. If A is formed via Kolbe–Schmitt reaction and the final product D is obtained after the given sequence, then D is:",
+      "options": [
+        "Benzene",
+        "Toluene",
+        "Cyclohexane",
+        "Phenol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 10,
+      "question": "Consider the following statements regarding carbohydrates. Assertion (A): Sucrose is a non-reducing sugar. Reason (R): In sucrose, both the anomeric carbon atoms of glucose and fructose participate in glycosidic bond formation. Choose the correct option.",
+      "options": [
+        "Both Assertion and Reason are true, and Reason is the correct explanation of Assertion",
+        "Both Assertion and Reason are true, but Reason is not the correct explanation of Assertion",
+        "Assertion is true, but Reason is false",
+        "Assertion is false, but Reason is true"
+      ],
+      "answer": 0
+    }
+  ]
+}

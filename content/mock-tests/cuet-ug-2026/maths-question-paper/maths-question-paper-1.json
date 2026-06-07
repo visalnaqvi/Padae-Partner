@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "maths-question-paper-1",
+  "title": "CUET 2026 Mathematics Mock Test 1",
+  "description": "Memory-based CUET 2026 May 31 Shift 2 Mathematics question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "If y(x) = det([[sin x, cos x, sin x + cos x + 1], [27, 28, 27], [1, 1, 1]]) for x ∈ R, then d²y/dx² + y equals:",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 2,
+      "question": "Let y = f(x) satisfy dy/dx + (xy)/(x² − 1) = (x⁶ + 4x)√(1 − x²), −1 < x < 1, with f(0) = 0. If 6∫[-1/2 to 1/2] f(x)dx = 2π − α, then α² equals:",
+      "options": [
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 3,
+      "question": "If the system 2x + λy + 3z = 5, 3x + 2y − z = 7, 4x + 5y + μz = 9 has infinitely many solutions, then λ² + μ² equals:",
+      "options": [
+        "20",
+        "24",
+        "26",
+        "28"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "Let f : R → R be a thrice differentiable odd function satisfying f′(x) ≥ 0, f″(x) = f(x), f(0) = 0, f′(0) = 3. Then 9f(ln 3) equals:",
+      "options": [
+        "24",
+        "30",
+        "36",
+        "42"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 5,
+      "question": "Let y = y(x) satisfy cos x(log(cos x))² dy + (sin x − 3y sin x log(cos x))dx = 0, x ∈ (0, π/2). If y(π/4) = −1/log 2, then y(π/6) equals:",
+      "options": [
+        "1/(log 3 − log 4)",
+        "1/log 2",
+        "1/log 3",
+        "1/log 4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 6,
+      "question": "If f(x) = ∫ dx/[x^(1/4)(1 + x^(1/4))] and f(0) = −6, then f(1) equals:",
+      "options": [
+        "4(ln 2 − 2)",
+        "4(ln 2 − 1)",
+        "2(ln 2 − 1)",
+        "6(ln 2 − 2)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 7,
+      "question": "The number of relations on A = {1, 2, 3} containing at most 6 elements including (1,2), that are reflexive and transitive but not symmetric is:",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 8,
+      "question": "The number of singular matrices of order 2, whose elements are from the set {2, 3, 6, 9}, is:",
+      "options": [
+        "32",
+        "36",
+        "40",
+        "44"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "Let a ∈ R and A be a matrix of order 3×3 such that det(A) = −4 and A + I = [[1, a, 1], [2, 1, 0], [a, 1, 2]]. If det((a + 1) adj((a − 1)A)) is 2^m 3^n, then m + n equals:",
+      "options": [
+        "14",
+        "07",
+        "18",
+        "20"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 10,
+      "question": "Let A = [[log₅128, log₄5], [log₅8, log₄25]]. If Aᵢⱼ is the cofactor of aᵢⱼ, Cᵢⱼ = Σ(aᵢₖAⱼₖ), and C = [Cᵢⱼ], then 8|C| equals:",
+      "options": [
+        "2³⁸",
+        "2⁴⁰",
+        "2⁴²",
+        "2⁴⁴"
+      ],
+      "answer": 2
+    }
+  ]
+}

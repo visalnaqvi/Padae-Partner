@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "physics-question-paper-1",
+  "title": "CUET 2026 Physics Question Paper 1",
+  "description": "Memory-based CUET 2026 May 31 Shift 2 Physics question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Two charges +4 μC and +9 μC are separated by a distance of 3 m in vacuum. The electrostatic force between them is (k = 9 × 10^9 N m² C⁻²).",
+      "options": [
+        "0.018 N",
+        "0.036 N",
+        "0.054 N",
+        "0.072 N"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "question": "Given below are two statements: Assertion (A): In a pure inductive AC circuit, current lags voltage by 90°. Reason (R): An inductor opposes the change in current flowing through it. Choose the correct answer.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 3,
+      "question": "A resistor of resistance 20 Ω is connected across a 10 V battery. The current flowing through the resistor is",
+      "options": [
+        "0.2 A",
+        "0.5 A",
+        "2 A",
+        "5 A"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 4,
+      "question": "Match the semiconductor devices in Column I with their functions in Column II. Column I: (A) LED, (B) Zener Diode, (C) Photodiode, (D) Solar Cell. Column II: (I) Voltage Regulation, (II) Light Emission, (III) Light Detection, (IV) Converts Solar Energy into Electrical Energy.",
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-I, C-II, D-IV",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "question": "The energy of an electron in the first Bohr orbit of hydrogen atom is −13.6 eV. The energy of the electron in the third orbit is",
+      "options": [
+        "−1.51 eV",
+        "−3.4 eV",
+        "−13.6 eV",
+        "−0.85 eV"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 6,
+      "question": "Given below are two statements: Assertion (A): Electromagnetic waves can travel through vacuum. Reason (R): Electromagnetic waves consist of oscillating electric and magnetic fields. Choose the correct answer.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 7,
+      "question": "A convex lens has a focal length of 20 cm. An object is placed 30 cm from the lens. The image distance is",
+      "options": [
+        "60 cm",
+        "30 cm",
+        "20 cm",
+        "15 cm"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 8,
+      "question": "Match the following electromagnetic waves with their applications. Column I: (A) Gamma Rays, (B) X-rays, (C) Microwaves, (D) Radio Waves. Column II: (I) Radar Communication, (II) Cancer Treatment, (III) Medical Imaging, (IV) Broadcasting.",
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-II, C-IV, D-I"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 9,
+      "question": "A photon of wavelength 500 nm is incident on a metal surface. The energy of the photon is approximately (h = 6.63 × 10⁻³⁴ J s, c = 3 × 10⁸ m/s).",
+      "options": [
+        "1.99 × 10⁻¹⁹ J",
+        "3.98 × 10⁻¹⁹ J",
+        "5.97 × 10⁻¹⁹ J",
+        "7.96 × 10⁻¹⁹ J"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 10,
+      "question": "Given below are two statements: Assertion (A): In a nuclear reactor, control rods are used to control the rate of fission reaction. Reason (R): Control rods absorb excess neutrons produced during fission. Choose the correct answer.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 0
+    }
+  ]
+}

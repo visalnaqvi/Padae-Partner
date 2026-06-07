@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "general-aptitude-question-paper-2",
+  "title": "CUET 2026 General Aptitude Test Mock Test 2",
+  "description": "Memory-based CUET 2026 May 31 Shift 1 General Aptitude Test question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following organizations publishes the annual Human Development Report (HDR)?",
+      "options": [
+        "World Bank",
+        "United Nations Development Programme (UNDP)",
+        "International Monetary Fund (IMF)",
+        "World Trade Organization (WTO)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "question": "The term 'Blue Economy' is most closely associated with:",
+      "options": [
+        "Space exploration and satellite technology",
+        "Sustainable use of ocean resources for economic growth",
+        "Cryptocurrency-based financial systems",
+        "Development of freshwater reservoirs"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "If 15% of a number is added to the number itself, the result becomes 460. The original number is:",
+      "options": [
+        "380",
+        "400",
+        "420",
+        "440"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 4,
+      "question": "The term 'Gross National Happiness (GNH)' is primarily associated with which country?",
+      "options": [
+        "Nepal",
+        "Bhutan",
+        "Sri Lanka",
+        "Maldives"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 5,
+      "question": "A sum of money amounts to 24,200 in 2 years and 26,620 in 3 years at simple interest. The principal amount is:",
+      "options": [
+        "20,000",
+        "21,780",
+        "22,000",
+        "23,500"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 6,
+      "question": "Which of the following reports is published annually by the World Economic Forum (WEF)?",
+      "options": [
+        "Human Development Report",
+        "Global Gender Gap Report",
+        "World Population Prospects",
+        "State of World Fisheries Report"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "The 'Right to Privacy' was declared a Fundamental Right under the Constitution of India by the Supreme Court in which landmark case?",
+      "options": [
+        "Kesavananda Bharati v. State of Kerala",
+        "Maneka Gandhi v. Union of India",
+        "Justice K.S. Puttaswamy v. Union of India",
+        "Minerva Mills v. Union of India"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 8,
+      "question": "A train leaves Station A at 8:00 AM and travels towards Station B at a speed of 60 km/h. Another train leaves Station B towards Station A at 9:00 AM at a speed of 90 km/h. The distance between the stations is 390 km. At what time will the two trains meet?",
+      "options": [
+        "10:30 AM",
+        "11:00 AM",
+        "11:30 AM",
+        "12:00 Noon"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "Which of the following Nobel Prize categories was not included in Alfred Nobel’s original will?",
+      "options": [
+        "Chemistry",
+        "Literature",
+        "Economics",
+        "Physics"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "Read the statements carefully. Statement I: All researchers are analysts. Statement II: Some analysts are economists. Statement III: No economist is a lawyer. Which of the following conclusions definitely follows?",
+      "options": [
+        "No researcher is a lawyer",
+        "Some researchers are economists",
+        "Some analysts are not lawyers",
+        "All analysts are economists"
+      ],
+      "answer": 2
+    }
+  ]
+}

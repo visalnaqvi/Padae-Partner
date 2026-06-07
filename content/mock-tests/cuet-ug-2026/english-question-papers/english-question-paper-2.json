@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "english-question-paper-2",
+  "title": "CUET 2026 English Mock Test 2",
+  "description": "Memory-based CUET 2026 May 31 Shift 2 English question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Choose the grammatically correct sentence.",
+      "options": [
+        "Neither of the proposals were accepted by the committee.",
+        "Neither of the proposals have been accepted by the committee.",
+        "Neither of the proposals was accepted by the committee.",
+        "Neither of the proposals are accepted by the committee."
+      ],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "Choose the correctly spelled word.",
+      "options": [
+        "Ocassion",
+        "Occasion",
+        "Occassion",
+        "Ocassionn"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Choose the option that best expresses the meaning of the idiom 'Too many irons in the fire'.",
+      "options": [
+        "To work near a furnace",
+        "To have too many tasks or commitments at the same time",
+        "To waste resources carelessly",
+        "To be physically exhausted"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 4,
+      "question": "Choose the correct word to complete the sentence. The professor’s explanation was so ____ that students from different academic backgrounds could understand the concept without difficulty.",
+      "options": [
+        "obscure",
+        "lucid",
+        "ambiguous",
+        "cryptic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 5,
+      "question": "Choose the sentence that is free from error.",
+      "options": [
+        "Hardly had I reached the station than the train departed.",
+        "Hardly I had reached the station when the train departed.",
+        "Hardly had I reached the station when the train departed.",
+        "Hardly had reached I the station when the train departed."
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "Read the following passage carefully and answer the question that follows. 'The rapid expansion of social media has transformed the way information is disseminated. While it has enabled individuals to access news instantly and participate in public discourse, it has also facilitated the rapid spread of misinformation. Experts argue that digital literacy is becoming increasingly important because the ability to evaluate information critically is essential in an environment where anyone can publish content.' Which of the following can be most reasonably inferred from the passage?",
+      "options": [
+        "Social media has had only negative effects on society.",
+        "Digital literacy is unnecessary because information is easily available online.",
+        "Critical evaluation of information has become increasingly important in the digital age.",
+        "Governments should completely ban social media platforms."
+      ],
+      "answer": 2
+    },
+    {
+      "id": 7,
+      "question": "Choose the word that is closest in meaning to 'dissonance'.",
+      "options": [
+        "Harmony",
+        "Agreement",
+        "Discord",
+        "Balance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 8,
+      "question": "Choose the correct arrangement of the following sentences to form a coherent paragraph. P. Consequently, governments around the world have started investing heavily in renewable energy technologies. Q. Fossil fuels have powered industrial growth for more than a century. R. However, growing concerns regarding climate change have highlighted their environmental costs. S. Renewable energy sources such as solar and wind power are viewed as sustainable alternatives.",
+      "options": [
+        "QRSP",
+        "QRPS",
+        "QSPR",
+        "RQSP"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 9,
+      "question": "Choose the option that best replaces the underlined part of the sentence. Had the manager informed us earlier, we ____ the project before the deadline.",
+      "options": [
+        "will have completed",
+        "would complete",
+        "would have completed",
+        "had completed"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "Read the following passage carefully and answer the question that follows. 'Scientific progress is often portrayed as a steady accumulation of knowledge. However, historians of science argue that major advances frequently occur through paradigm shifts, where established assumptions are challenged and replaced by new frameworks. Such transformations may initially face resistance because prevailing theories often become deeply embedded within scientific communities.' Which of the following assumptions is most strongly supported by the passage?",
+      "options": [
+        "Scientific theories never change once they are accepted.",
+        "New scientific ideas are always accepted immediately.",
+        "Established scientific communities may resist ideas that challenge existing beliefs.",
+        "Scientific progress depends entirely on technological inventions."
+      ],
+      "answer": 2
+    }
+  ]
+}
