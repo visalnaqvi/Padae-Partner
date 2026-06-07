@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "bussiness-studies-question-paper-1",
+  "title": "CUET 2026 Business Studies Mock Test 1",
+  "description": "Memory-based CUET 2026 May 31 Shift 1 Business Studies question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following is not a function of management?",
+      "options": [
+        "Planning",
+        "Organising",
+        "Advertising",
+        "Controlling"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "Match the levels of management in Column I with their primary responsibilities in Column II. Column I: (A) Top Management, (B) Middle Management, (C) Supervisory Management. Column II: (I) Supervising workers, (II) Implementing policies, (III) Formulating policies.",
+      "options": [
+        "A-I, B-II, C-III",
+        "A-III, B-II, C-I",
+        "A-II, B-I, C-III",
+        "A-III, B-I, C-II"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is the first step in the planning process?",
+      "options": [
+        "Identifying alternatives",
+        "Setting objectives",
+        "Selecting an alternative",
+        "Follow-up action"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 4,
+      "question": "Given below are two statements: Assertion (A): Division of work increases efficiency and productivity. Reason (R): Specialisation enables workers to become experts in their assigned tasks. Choose the correct answer.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is an element of delegation?",
+      "options": [
+        "Motivation",
+        "Authority",
+        "Coordination",
+        "Planning"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "Match the following financial markets with their characteristics. Column I: (A) Money Market, (B) Capital Market, (C) Equity Shares, (D) Debentures. Column II: (I) Long-term funds, (II) Treasury Bills, (III) Ownership capital, (IV) Borrowed capital.",
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 7,
+      "question": "Consumer Protection Act provides protection to consumers against:",
+      "options": [
+        "Fair trade practices",
+        "Exploitation by sellers and manufacturers",
+        "Government policies",
+        "Business expansion"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Given below are two statements: Assertion (A): Leadership helps in influencing employees to achieve organisational goals. Reason (R): Leadership is an important element of directing. Choose the correct answer.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 9,
+      "question": "Which of the following is a monetary incentive provided to employees?",
+      "options": [
+        "Job Security",
+        "Employee Participation",
+        "Bonus",
+        "Recognition"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "Match the following marketing functions with their descriptions. Column I: (A) Product Planning, (B) Branding, (C) Promotion, (D) Packaging. Column II: (I) Informing customers about products, (II) Designing and developing products, (III) Creating a unique identity, (IV) Protecting and presenting products.",
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-II, C-IV, D-I"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "economics-question-paper-2",
+  "title": "CUET 2026 Economics Mock Test 2",
+  "description": "Memory-based CUET 2026 June 6 Shift 1 Economics question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "If the price elasticity of demand for a commodity is -2, and the seller reduces the price of the commodity by 10%, then the percentage change in total revenue will be:",
+      "options": [
+        "Increase by 10%",
+        "Increase by 20%",
+        "Increase by 10% approximately",
+        "Decrease by 10%"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "Which of the following situations represents a contraction in demand and not a decrease in demand?",
+      "options": [
+        "Income of consumers decreases and demand falls",
+        "Price of the commodity rises and quantity demanded falls",
+        "Price of substitute commodity falls",
+        "Consumer preference shifts away from the commodity"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Suppose Marginal Propensity to Consume (MPC) is 0.75. The value of the investment multiplier will be:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "In an economy, Autonomous Consumption is 100 crore and the Marginal Propensity to Consume (MPC) is 0.75. If investment increases by 80 crore, then the increase in equilibrium income will be:",
+      "options": [
+        "240 crore",
+        "300 crore",
+        "320 crore",
+        "400 crore"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 5,
+      "question": "A consumer spends his entire income on goods X and Y. The price of X is ₹20 per unit and the price of Y is ₹10 per unit. If his income is ₹400, which of the following combinations lies on his budget line?",
+      "options": [
+        "X = 5, Y = 25",
+        "X = 10, Y = 20",
+        "X = 15, Y = 5",
+        "X = 8, Y = 18"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "The Reserve Bank of India purchases government securities worth ₹5,000 crore from the open market. Assuming Cash Reserve Ratio remains unchanged, the immediate effect of this operation will be:",
+      "options": [
+        "Reduction in money supply and liquidity",
+        "Increase in liquidity and money supply",
+        "Increase in CRR",
+        "Reduction in bank deposits"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "The following information relates to an economy (in crore): Private Final Consumption Expenditure = 8,000; Government Final Consumption Expenditure = 2,000; Gross Domestic Capital Formation = 3,000; Net Exports = -500. Calculate the GDP at Market Price using the Expenditure Method.",
+      "options": [
+        "12,000 crore",
+        "12,500 crore",
+        "13,000 crore",
+        "13,500 crore"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "In a perfectly competitive market, a firm's Total Revenue and Total Cost functions are: TR = 120Q and TC = 200 + 40Q + Q². The profit-maximizing output level is:",
+      "options": [
+        "20 units",
+        "30 units",
+        "40 units",
+        "50 units"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 9,
+      "question": "The price elasticity of demand for a commodity is -1.5. If its price increases by 10%, then the approximate percentage change in quantity demanded will be:",
+      "options": [
+        "Decrease by 5%",
+        "Decrease by 10%",
+        "Decrease by 15%",
+        "Increase by 15%"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "Read the following statements carefully: I. Every increase in investment necessarily increases Aggregate Demand. II. Ex-ante savings are always equal to Ex-post savings. III. Ex-ante investment and Ex-ante savings may differ. IV. Equilibrium income is determined at the point where Aggregate Demand equals Aggregate Supply. Choose the correct answer.",
+      "options": [
+        "I, II and III only",
+        "II, III and IV only",
+        "I, III and IV only",
+        "I, II, III and IV"
+      ],
+      "answer": 3
+    }
+  ]
+}

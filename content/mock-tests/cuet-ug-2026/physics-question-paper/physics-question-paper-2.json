@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "cuet-2026-physics-mock-test-2",
+  "title": "CUET 2026 Physics Mock Test 2",
+  "description": "Memory-based CUET 2026 June 1 Shift 1 Physics question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "A wire of resistance 5 Ω is connected across a 10 V battery. The current flowing through the wire is:",
+      "options": [
+        "0.5 A",
+        "1 A",
+        "2 A",
+        "5 A"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "The de Broglie wavelength associated with an electron is inversely proportional to its:",
+      "options": [
+        "Charge",
+        "Momentum",
+        "Potential Energy",
+        "Frequency"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "A circular coil carries a current of 4 A. If the current is doubled, the magnetic field at its centre becomes:",
+      "options": [
+        "Half",
+        "Double",
+        "Four times",
+        "Unchanged"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 4,
+      "question": "A body of mass 4 kg is moving with a speed of 10 m/s. Its kinetic energy is:",
+      "options": [
+        "100 J",
+        "150 J",
+        "200 J",
+        "400 J"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 5,
+      "question": "An object is placed at a distance of 30 cm from a convex lens of focal length 15 cm. The image is formed at:",
+      "options": [
+        "15 cm",
+        "20 cm",
+        "30 cm",
+        "Infinity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "The rms speed of molecules of an ideal gas at temperature 300 K is 500 m/s. If the temperature is increased to 1200 K, the new rms speed will be:",
+      "options": [
+        "250 m/s",
+        "500 m/s",
+        "1000 m/s",
+        "2000 m/s"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 7,
+      "question": "The work function of a metal is 2 eV. If light of energy 5 eV falls on the metal surface, the maximum kinetic energy of the emitted photoelectrons is:",
+      "options": [
+        "2 eV",
+        "3 eV",
+        "5 eV",
+        "7 eV"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Two capacitors of capacitances 4 μF and 6 μF are connected in parallel. The equivalent capacitance is:",
+      "options": [
+        "2.4 μF",
+        "5 μF",
+        "10 μF",
+        "24 μF"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 9,
+      "question": "The half-life of a radioactive substance is 4 days. What fraction of the original sample remains after 12 days?",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "A coil experiences a change in magnetic flux from 0.2 Wb to 0.8 Wb in 0.1 s. The average induced emf in the coil is:",
+      "options": [
+        "2 V",
+        "4 V",
+        "6 V",
+        "8 V"
+      ],
+      "answer": 2
+    }
+  ]
+}

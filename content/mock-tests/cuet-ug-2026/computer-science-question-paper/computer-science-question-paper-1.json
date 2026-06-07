@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "computer-science-question-paper-1",
+  "title": "CUET 2026 Computer Science Mock Test 1",
+  "description": "Memory-based CUET 2026 May 31 Shift 1 Computer Science question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which switching technique is used in the Internet?",
+      "options": [
+        "Circuit Switching",
+        "Packet Switching",
+        "Message Switching",
+        "Hybrid Switching"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 2,
+      "question": "Telephone conversation is an example of:",
+      "options": [
+        "Simplex",
+        "Half Duplex",
+        "Full Duplex",
+        "Multiplex"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 3,
+      "question": "Linear search works best on:",
+      "options": [
+        "Sorted list",
+        "Unsorted list",
+        "Binary tree",
+        "Hash table"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 4,
+      "question": "Which search method has logarithmic complexity?",
+      "options": [
+        "Linear Search",
+        "Binary Search",
+        "Sequential Search",
+        "Traversal"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 5,
+      "question": "Who developed Python programming language?",
+      "options": [
+        "Dennis Ritchie",
+        "James Gosling",
+        "Guido van Rossum",
+        "Bjarne Stroustrup"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "Which keyword is used to define a function in Python?",
+      "options": [
+        "function",
+        "define",
+        "def",
+        "fun"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 7,
+      "question": "Which operator is used for logical AND in Python?",
+      "options": [
+        "&",
+        "and",
+        "or",
+        "AND"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Which one of the following is the formula used to calculate the middle index in Binary Search?",
+      "options": [
+        "(low + high) / 2",
+        "low + high",
+        "high - low",
+        "(high - low) / 2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": 9,
+      "question": "Which of the following is NOT an element of communication?",
+      "options": [
+        "Sender",
+        "Receiver",
+        "Message",
+        "Compiler"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 10,
+      "question": "Linear Search is useful when:",
+      "options": [
+        "Data is unsorted",
+        "Dataset is small",
+        "Both A and B",
+        "Data is indexed"
+      ],
+      "answer": 2
+    }
+  ]
+}

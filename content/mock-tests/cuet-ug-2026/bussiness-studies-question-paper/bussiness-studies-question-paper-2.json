@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slug": "bussiness-studies-question-paper-2",
+  "title": "CUET 2026 Business Studies Mock Test 2",
+  "description": "Memory-based CUET 2026 June 6 Shift 1 Business Studies question paper with solutions.",
+  "duration": 600,
+  "defaultMarks": 5,
+  "defaultNegativeMarks": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following is not a characteristic of management?",
+      "options": [
+        "Management is goal-oriented",
+        "Management is a continuous process",
+        "Management is an individual activity only",
+        "Management is a group activity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 2,
+      "question": "Which level of management is responsible for translating organizational plans into action?",
+      "options": [
+        "Top-level management",
+        "Middle-level management",
+        "Supervisory management",
+        "Shareholders"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 3,
+      "question": "Which principle of management states that a subordinate should receive orders from only one superior?",
+      "options": [
+        "Unity of Direction",
+        "Scalar Chain",
+        "Unity of Command",
+        "Equity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is a financial incentive provided to employees?",
+      "options": [
+        "Promotion",
+        "Job Security",
+        "Bonus",
+        "Employee Recognition"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 5,
+      "question": "Planning provides directions for action and reduces uncertainty. This highlights which importance of planning?",
+      "options": [
+        "Promotes Innovative Ideas",
+        "Facilitates Decision Making",
+        "Reduces the Risk of Uncertainty",
+        "Establishes Standards for Controlling"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "Which type of plan is formulated for activities that occur repeatedly over a long period of time?",
+      "options": [
+        "Method",
+        "Project",
+        "Single-use Plan",
+        "Standing Plan"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 7,
+      "question": "The process of assigning duties, grouping tasks and establishing authority relationships among employees is known as:",
+      "options": [
+        "Staffing",
+        "Organising",
+        "Directing",
+        "Controlling"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is the first step in the staffing process?",
+      "options": [
+        "Recruitment",
+        "Selection",
+        "Training and Development",
+        "Estimating Manpower Requirements"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 9,
+      "question": "The element of directing that seeks to influence the behaviour of employees to achieve organizational objectives is called:",
+      "options": [
+        "Communication",
+        "Supervision",
+        "Motivation",
+        "Delegation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "In the controlling process, comparing actual performance with predetermined standards is known as:",
+      "options": [
+        "Measurement of Performance",
+        "Taking Corrective Action",
+        "Analysis of Deviations",
+        "Setting Standards"
+      ],
+      "answer": 2
+    }
+  ]
+}
