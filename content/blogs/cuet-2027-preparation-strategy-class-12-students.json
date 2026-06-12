@@ -1,9 +1,25 @@
 {
   "schemaVersion": 1,
   "slug": "cuet-2027-preparation-strategy-class-12-students",
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-12",
+  "category": "CUET Preparation",
+  "author": {
+    "name": "Visal Naqvi",
+    "url": "https://padaepartner.com"
+  },
   "seo": {
-    "title": "CUET 2027 Preparation Strategy for Class 12 Students: Month-by-Month Study Plan",
-    "description": "Complete CUET 2027 preparation strategy for Class 12 students. Get a month-by-month study plan, subject-wise preparation tips, mock test strategy, time management techniques, and expert guidance to score 750+ marks in CUET UG 2027."
+    "title": "CUET 2027 Preparation Strategy for Class 12",
+    "description": "A month-by-month CUET 2027 study plan for Class 12 students with subject-wise tips, mock-test strategy, and time management to score 750+ in CUET UG.",
+    "image": "/blogs-asset/cuet-2027-preparation-strategy.png",
+    "keywords": [
+      "CUET 2027 preparation",
+      "CUET 2027 study plan",
+      "CUET preparation for Class 12",
+      "CUET 2027 strategy",
+      "how to score 750 in CUET",
+      "CUET UG 2027"
+    ]
   },
   "blocks": [
     {
@@ -14,7 +30,8 @@
     {
       "type": "image",
       "src": "/blogs-asset/cuet-2027-preparation-strategy.png",
-      "alt": "CUET 2027 Preparation Strategy for Class 12 Students"
+      "alt": "CUET 2027 Preparation Strategy for Class 12 Students",
+      "priority": true
     },
     {
       "type": "paragraph",

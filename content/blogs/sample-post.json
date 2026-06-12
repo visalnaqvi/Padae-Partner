@@ -1,9 +1,25 @@
 {
-  "schemaVersion": 1,
+ "schemaVersion": 1,
   "slug": "sample-post",
+  "datePublished": "2026-06-12",
+  "dateModified": "2026-06-12",
+  "category": "Sample Post",
+  "author": {
+    "name": "Visal Naqvi",
+    "url": "https://padaepartner.com"
+  },
   "seo": {
-    "title": "Sample Blog Post",
-    "description": "Sample description"
+    "title": "Sample Blog Title",
+    "description": "Sample Blog Description",
+    "image": "/blogs-asset/cuet-2026-colleges-accepting.png",
+    "keywords": [
+      "colleges accepting CUET 2026",
+      "universities accepting CUET",
+      "CUET participating universities 2026",
+      "CUET cutoff 2026",
+      "DU CUET cutoff 2026",
+      "CUET UG 2026 colleges"
+    ]
   },
   "blocks": [
     {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LeadForm from "@/components/landing/LeadForm";
 import SectionHeader from "@/components/landing/SectionHeader";
 import { FeatureCard, InfoCard } from "@/components/landing/CardGrid";
@@ -21,13 +22,17 @@ import "./cuet-ug.css";
 
 const pageUrl = "/cuet-ug-2027-coaching";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://padaepartner.com";
-const pageTitle = "CUET UG Coaching 2027 | Online CUET Classes, Mock Tests & Counseling";
+const pageTitle = "CUET UG 2027 Coaching | Online & Offline Classes, Mock Tests";
 const pageDescription =
-  "Join Padae Partner CUET UG coaching for 2027 with live online classes, mock tests, PYQ practice, doubt solving, study material, and admission counseling for top universities.";
+  "Padae Partner CUET UG 2027 coaching with live online & offline classes, mock tests, PYQ practice, doubt solving, study material and university admission counseling.";
 const pageKeywords = [
-  "CUET UG coaching",
+  "CUET UG 2027 coaching",
   "CUET UG coaching 2027",
+  "CUET UG 2027 classes",
+  "CUET 2027 preparation",
+  "CUET UG coaching",
   "CUET coaching online",
+  "CUET offline coaching",
   "CUET UG online classes",
   "CUET preparation course",
   "CUET mock test series",
@@ -160,7 +165,9 @@ const plans = [
 
 const faqs = [
   ["Who can join the CUET UG 2027 coaching program?", "Students in Class 11, Class 12, and droppers preparing for CUET UG 2027 can join."],
-  ["Is this CUET UG coaching online or offline?", "The CUET UG coaching program is designed for live online learning with recorded support and counseling calls."],
+  ["When should I start CUET UG 2027 coaching?", "It is best to start CUET UG 2027 coaching early — ideally from Class 11 or the start of Class 12 — so you get enough time for concept building, full syllabus coverage, revision, and multiple mock tests before the exam. Droppers can join an intensive plan at any time."],
+  ["Which subjects are covered in CUET UG 2027 coaching?", "Our CUET UG 2027 coaching covers the General Test, Language (English/Hindi), and major domain subjects, so you can prepare the exact subject combination required for your target university and course."],
+  ["Is this CUET UG coaching online or offline?", "Both. You can join live online classes with recorded support and counseling calls, or attend in-person offline classroom batches. Choose the format that suits you best."],
   ["Do you provide CUET mock tests?", "Yes. Students get topic-wise tests, weekly CUET practice, and full-length mock tests."],
   ["Will I get CUET previous year questions?", "Yes. CUET PYQ practice is included to help students understand question patterns."],
   ["Do you help with university selection?", "Yes. Admission counseling helps students choose target courses and universities."],
@@ -171,27 +178,65 @@ const faqs = [
   ["How do I book my seat?", "Submit any form on this page or use the WhatsApp and call buttons for quick help. A counselor will confirm current seat availability."],
 ];
 
+const provider = {
+  "@type": "EducationalOrganization",
+  name: "Padae Partner",
+  url: siteUrl,
+};
+
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
-  name: "CUET UG Coaching 2027",
+  name: "CUET UG 2027 Coaching",
   description: pageDescription,
-  provider: {
-    "@type": "EducationalOrganization",
-    name: "Padae Partner",
-    url: siteUrl,
-  },
+  provider,
   educationalLevel: "Undergraduate entrance exam preparation",
-  courseMode: "Online",
+  inLanguage: ["en", "hi"],
   url: `${siteUrl}${pageUrl}`,
+  hasCourseInstance: [
+    {
+      "@type": "CourseInstance",
+      name: "CUET UG 2027 Online Coaching",
+      courseMode: "online",
+      description:
+        "Live online CUET UG 2027 classes with recorded sessions, online mock tests, doubt solving, and admission counseling.",
+    },
+    {
+      "@type": "CourseInstance",
+      name: "CUET UG 2027 Offline Classroom Coaching",
+      courseMode: "onsite",
+      description:
+        "In-person offline CUET UG 2027 classroom batches with experienced faculty, printed study material, and offline mock tests.",
+    },
+  ],
   offers: plans.map(([name, price]) => ({
     "@type": "Offer",
-    name: `${name} CUET UG Coaching Plan`,
-    price: price.replace("Rs. ", ""),
+    name: `${name} CUET UG 2027 Coaching Plan`,
+    price: price.replace("Rs. ", "").replace(",", ""),
     priceCurrency: "INR",
+    category: "Paid",
     availability: "https://schema.org/InStock",
     url: `${siteUrl}${pageUrl}`,
   })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+    { "@type": "ListItem", position: 2, name: "CUET UG 2027 Coaching", item: `${siteUrl}${pageUrl}` },
+  ],
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Padae Partner",
+  url: siteUrl,
+  description:
+    "Padae Partner offers CUET UG 2027 coaching with live online and offline classes, mock tests, PYQ practice, doubt solving, and university admission counseling.",
+  logo: `${siteUrl}/logo.png`,
 };
 
 const faqSchema = {
@@ -223,19 +268,20 @@ export default function CuetUgLandingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([courseSchema, faqSchema]),
+          __html: JSON.stringify([organizationSchema, breadcrumbSchema, courseSchema, faqSchema]),
         }}
       />
       {/* HERO: Above-the-fold value proposition with immediate lead capture for paid traffic. */}
       <section className="lp-hero">
         <div className="lp-hero-copy">
-          <span className="lp-eyebrow">CUET UG coaching 2027</span>
+          <span className="lp-eyebrow">CUET UG 2027 coaching</span>
           <h1>
-            <span className="lp-title-highlight">CUET UG Coaching for Top Central University Admissions</span> 
+            <span className="lp-title-highlight">CUET UG 2027 Coaching</span> — Online &amp; Offline Classes for Top University Admissions
           </h1>
           <p>
-            Prepare for CUET UG 2027 with live online classes, mock tests, PYQ practice,
-            study material, doubt support, and admission counseling from Padae Partner.
+            Prepare for CUET UG 2027 with Padae Partner. Join live online classes or
+            in-person offline batches with mock tests, PYQ practice, study material,
+            doubt support, and university admission counseling — all in one program.
           </p>
           {/* <BatchClosingGraphic /> */}
           <HeroPointList points={heroPoints} />
@@ -254,7 +300,7 @@ export default function CuetUgLandingPage() {
       <section className="lp-stats-section" aria-label="Padae Partner student outcomes">
         <div className="lp-stats-copy">
           <span className="lp-eyebrow">Trusted by CUET aspirants</span>
-          <h2>CUET UG preparation guidance for ambitious university goals.</h2>
+          <h2>CUET UG 2027 coaching guidance for ambitious university goals.</h2>
         </div>
         <div className="lp-stats-grid">
           {heroStats.map(([value, label]) => (
@@ -263,6 +309,28 @@ export default function CuetUgLandingPage() {
               <span>{label}</span>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* SEO INTRO: Keyword-rich overview text for search engines and first-time visitors. */}
+      <section className="lp-section">
+        <div className="lp-prose">
+          <h2>CUET UG 2027 Coaching by Padae Partner</h2>
+          <p>
+            Padae Partner&apos;s <strong>CUET UG 2027 coaching</strong> is a complete preparation
+            program for students who want to crack the Common University Entrance Test (CUET UG)
+            and secure admission into top central universities like Delhi University, BHU, JMI,
+            and AMU. Whether you prefer studying from home or in a classroom, you can join our
+            live <strong>online classes</strong> or in-person <strong>offline batches</strong> and
+            follow a structured, exam-focused plan.
+          </p>
+          <p>
+            The course combines concept-first teaching, regular CUET mock tests, previous year
+            question (PYQ) practice, dedicated doubt-solving sessions, ready-to-use study material,
+            and end-to-end admission counseling. Every part of the CUET UG 2027 coaching program is
+            designed to improve your CUET score and help you plan the right university and course
+            preferences with confidence.
+          </p>
         </div>
       </section>
 
@@ -295,6 +363,76 @@ export default function CuetUgLandingPage() {
             alt="CUET UG 2027 preparation roadmap"
           />
         </picture>
+        <SectionBookButton />
+      </section>
+
+      {/* LEARNING MODES: Clarifies that both online and offline CUET classes are available. */}
+      <section className="lp-section lp-soft-band" aria-label="Online and offline CUET UG classes">
+        <SectionHeader
+          eyebrow="Online & offline classes"
+          title="Learn the way that works best for you."
+          description="Padae Partner offers both live online CUET UG classes and in-person offline classroom coaching, so you can choose the format that fits your routine, location, and learning style."
+          center
+        />
+        <div className="lp-mode-grid">
+          <article className="lp-mode-card lp-mode-card-online">
+            <div className="lp-mode-head">
+              <span className="lp-mode-icon" aria-hidden="true">
+                <PlayCircleIcon />
+              </span>
+              <div>
+                <h3>Online CUET Classes</h3>
+                <span className="lp-mode-tag">Available everywhere</span>
+              </div>
+            </div>
+            <p>Join live interactive CUET UG classes from home and learn from expert mentors without travel.</p>
+            <ul className="lp-mode-list">
+              {[
+                "Live interactive classes from anywhere in India",
+                "Recorded sessions for revision and missed classes",
+                "Online mock tests with instant performance reports",
+                "Doubt solving and mentor support on chat",
+              ].map((point) => (
+                <li key={point}>
+                  <CheckCircleOutlineIcon aria-hidden="true" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <Link className="lp-secondary-btn" href="/cuet-ug-2027-coaching/online-coaching">
+              Explore Online Coaching
+            </Link>
+          </article>
+
+          <article className="lp-mode-card lp-mode-card-offline">
+            <div className="lp-mode-head">
+              <span className="lp-mode-icon" aria-hidden="true">
+                <BankIcon />
+              </span>
+              <div>
+                <h3>Offline Classroom Coaching</h3>
+                <span className="lp-mode-tag">In-person batches</span>
+              </div>
+            </div>
+            <p>Prefer a classroom? Attend face-to-face CUET UG coaching with a focused peer group and direct mentor guidance.</p>
+            <ul className="lp-mode-list">
+              {[
+                "In-person classroom teaching with experienced faculty",
+                "Structured offline batches and a fixed study routine",
+                "On-the-spot doubt clearing and personal attention",
+                "Printed study material, PYQs, and offline mock tests",
+              ].map((point) => (
+                <li key={point}>
+                  <CheckCircleOutlineIcon aria-hidden="true" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <Link className="lp-secondary-btn" href="/cuet-ug-2027-coaching/offline-coaching">
+              Explore Offline Coaching
+            </Link>
+          </article>
+        </div>
         <SectionBookButton />
       </section>
 
@@ -462,9 +600,56 @@ export default function CuetUgLandingPage() {
         />
       </section>
 
+      {/* SEO CONTENT: In-depth, keyword-targeted content block for topical authority. */}
+      <section className="lp-section lp-soft-band">
+        <div className="lp-prose">
+          <h2>What you get in our CUET UG 2027 coaching program</h2>
+          <p>
+            Our CUET UG 2027 coaching is built to cover the full Common University Entrance Test
+            journey — from concept building to final university preference filling. Here is what
+            makes the program effective for serious CUET aspirants.
+          </p>
+
+          <h3>Who should join CUET UG 2027 coaching?</h3>
+          <p>
+            Students in Class 11, Class 12, and droppers preparing for CUET UG 2027 can join.
+            Starting early gives you enough time for complete syllabus coverage, revision, and
+            multiple mock tests before the exam, while a focused dropper plan helps repeaters
+            improve their previous score.
+          </p>
+
+          <h3>Online and offline CUET classes</h3>
+          <p>
+            Choose the format that suits you. Our{" "}
+            <Link href="/cuet-ug-2027-coaching/online-coaching">online CUET classes</Link> are live
+            and interactive with recorded sessions for revision, so you can prepare from anywhere in
+            India. Prefer a classroom? Our{" "}
+            <Link href="/cuet-ug-2027-coaching/offline-coaching">offline CUET coaching</Link> batches
+            offer face-to-face teaching, a fixed study routine, and on-the-spot doubt clearing.
+          </p>
+
+          <h3>CUET mock tests, PYQs and study material</h3>
+          <p>
+            Regular topic-wise tests, full-length CUET mock tests, and previous year question (PYQ)
+            practice help you build speed, accuracy, and exam temperament. Detailed performance
+            reports highlight your weak areas, and concise notes, worksheets, and revision
+            resources keep your CUET UG 2027 preparation organized.
+          </p>
+
+          <h3>University admission counseling</h3>
+          <p>
+            Scoring well is only half the journey. Our counselors guide you through CUET subject
+            selection, course shortlisting, and university preference planning for Delhi University,
+            BHU, JMI, AMU, and other leading universities — so your score converts into the right
+            admission.
+          </p>
+        </div>
+        <SectionBookButton />
+      </section>
+
       {/* FAQ: Removes objections near the bottom of the paid landing page. */}
       <section className="lp-section">
-        <SectionHeader eyebrow="FAQ" title="Common questions before joining." />
+        <SectionHeader eyebrow="FAQ" title="CUET UG 2027 coaching — frequently asked questions" />
         <FAQAccordion faqs={faqs.map(([question, answer]) => ({ question, answer }))} />
         <SectionBookButton />
       </section>
