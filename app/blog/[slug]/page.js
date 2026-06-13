@@ -5,6 +5,7 @@ import {
   getAllBlogs,
   getAllBlogSlugs,
   getBlogBySlug,
+  getBlogDescription,
   getBlogFaqs,
   getBlogHeadline,
   getBlogImage,
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }) {
   }
 
   const title = blog.seo?.title || getBlogHeadline(blog);
-  const description = blog.seo?.description || "";
+  const description = getBlogDescription(blog);
   const canonical = `${siteUrl}/blog/${blog.slug}`;
   const author = blog.author?.name || DEFAULT_AUTHOR.name;
   const image = absoluteUrl(getBlogImage(blog));
@@ -84,6 +85,8 @@ function buildJsonLd(blog) {
   const headline = getBlogHeadline(blog);
   const image = absoluteUrl(getBlogImage(blog));
   const author = blog.author || DEFAULT_AUTHOR;
+  // A named individual is a Person; only the "Academic Team" fallback is an Org.
+  const isOrgAuthor = !blog.author;
   const published = blog.datePublished;
   const modified = blog.dateModified || blog.datePublished;
 
@@ -92,14 +95,16 @@ function buildJsonLd(blog) {
     "@type": "BlogPosting",
     mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     headline,
-    description: blog.seo?.description,
+    description: getBlogDescription(blog),
     image: image ? [image] : undefined,
     datePublished: published,
     dateModified: modified,
     author: {
-      "@type": author.url ? "Organization" : "Person",
+      "@type": isOrgAuthor ? "Organization" : "Person",
       name: author.name,
-      url: author.url,
+      ...(author.url ? { url: author.url } : {}),
+      ...(author.title && !isOrgAuthor ? { jobTitle: author.title } : {}),
+      ...(author.image ? { image: absoluteUrl(author.image) } : {}),
     },
     publisher: {
       "@type": "EducationalOrganization",
@@ -176,11 +181,12 @@ export default async function BlogSlugPage({ params }) {
   const readingMinutes = getBlogReadingMinutes(blog);
   const updatedLabel = formatDate(blog.dateModified || blog.datePublished);
   const author = blog.author?.name || DEFAULT_AUTHOR.name;
+  const authorTitle = blog.author?.title || null;
 
   // Enrich the hero block with byline/freshness signals shown under the H1.
   const blocks = blog.blocks.map((block) =>
     block.type === "hero"
-      ? { ...block, meta: { author, updatedLabel, readingMinutes } }
+      ? { ...block, meta: { author, authorTitle, updatedLabel, readingMinutes } }
       : block
   );
 

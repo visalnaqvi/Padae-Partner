@@ -289,6 +289,247 @@
 }
 
 /* ══════════════════════════════════════════
+   TEST LANDING PAGE (crawlable)
+══════════════════════════════════════════ */
+
+.mt-test-landing {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.mt-tl-hero {
+  background: linear-gradient(135deg, #0b1b22 0%, #163344 58%, #2f7d62 100%);
+  border-radius: 18px;
+  color: #ffffff;
+  margin: 0 auto 28px;
+  max-width: 860px;
+  padding: 34px 34px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mt-tl-eyebrow {
+  color: #ef9b2d;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.mt-tl-title {
+  color: #ffffff;
+  font-size: clamp(24px, 3.6vw, 36px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.mt-tl-desc {
+  color: #b8d9ce;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  max-width: 640px;
+}
+
+.mt-tl-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+}
+
+.mt-tl-facts li {
+  background: #ffffff12;
+  border: 1px solid #ffffff24;
+  border-radius: 8px;
+  color: #cfe6dd;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
+.mt-tl-facts strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.mt-tl-cta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.mt-tl-cta-note {
+  color: #9ecfbc;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mt-tl-section {
+  margin: 0 auto 30px;
+  max-width: 860px;
+}
+
+.mt-tl-section h2 {
+  color: var(--future-dark);
+  font-size: clamp(20px, 2.6vw, 26px);
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.mt-tl-section > p {
+  color: var(--ink-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.mt-tl-note {
+  font-size: 14px !important;
+  margin-bottom: 16px;
+}
+
+/* Question preview list */
+.mt-tl-qlist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: mtq;
+}
+
+.mt-tl-qitem {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px #10212b08;
+  counter-increment: mtq;
+  padding: 20px 22px;
+}
+
+.mt-tl-qtext {
+  color: var(--future-dark);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.mt-tl-qtext::before {
+  content: "Q" counter(mtq) ". ";
+  color: var(--contrast-primary);
+  font-weight: 900;
+}
+
+.mt-tl-qoptions {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mt-tl-qoptions li {
+  align-items: center;
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--future-dark);
+  display: flex;
+  font-size: 14px;
+  gap: 10px;
+  line-height: 1.45;
+  padding: 9px 13px;
+}
+
+.mt-tl-qletter {
+  align-items: center;
+  background: #edf2f0;
+  border-radius: 5px;
+  color: var(--future-dark);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 900;
+  height: 24px;
+  justify-content: center;
+  min-width: 24px;
+}
+
+/* FAQ */
+.mt-tl-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mt-tl-faq-item {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 4px 18px;
+}
+
+.mt-tl-faq-item summary {
+  color: var(--future-dark);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  list-style: none;
+  padding: 14px 0;
+}
+
+.mt-tl-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.mt-tl-faq-item[open] summary {
+  color: var(--contrast-primary);
+}
+
+.mt-tl-faq-item p {
+  color: var(--ink-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0 0 16px;
+}
+
+.mt-tl-related-card {
+  text-decoration: none;
+}
+
+/* Full-screen player overlay (launched from the landing page) */
+.mt-player-overlay {
+  background: var(--background);
+  inset: 0;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 1000;
+}
+
+@media (max-width: 520px) {
+  .mt-tl-hero {
+    padding: 24px 20px 22px;
+  }
+
+  .mt-tl-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mt-tl-start {
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════════════════
    CATEGORY & SUBCATEGORY LISTING
 ══════════════════════════════════════════ */
 

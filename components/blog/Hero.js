@@ -14,7 +14,14 @@ export default function Hero({ title, subtitle, label = "Study Guide", meta }) {
         {subtitle ? <p>{subtitle}</p> : null}
         {meta ? (
           <div className="blog-hero-byline">
-            {meta.author ? <span>By {meta.author}</span> : null}
+            {meta.author ? (
+              <span>
+                By {meta.author}
+                {meta.authorTitle ? (
+                  <span className="blog-hero-author-title">, {meta.authorTitle}</span>
+                ) : null}
+              </span>
+            ) : null}
             {meta.updatedLabel ? <span>Updated {meta.updatedLabel}</span> : null}
             {meta.readingMinutes ? (
               <span>{meta.readingMinutes} min read</span>

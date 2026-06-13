@@ -180,6 +180,7 @@ const testimonials = [
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
+  "@id": `${siteUrl}/#organization`,
   name: "Padae Partner",
   url: siteUrl,
   description:

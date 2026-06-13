@@ -57,6 +57,19 @@ export const metadata: Metadata = {
   },
 };
 
+// Site-wide Organization node. Shares its @id with the richer homepage schema
+// so search engines treat them as a single entity rather than duplicates.
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": `${siteUrl}/#organization`,
+  name: "Padae Partner",
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  description:
+    "CUET UG coaching with online, offline and recorded classes, free mock tests, notes and admission counseling for top central universities.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,6 +79,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <AntdProvider>
           <NavMenu />
           {children}

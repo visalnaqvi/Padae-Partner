@@ -4,9 +4,10 @@ import {
   getCategory,
   getSubcategory,
   getMockTestByPath,
+  getTestPageData,
   generateAllPaths,
 } from "@/lib/mock-tests";
-import MockTestApp from "@/components/mock-test/MockTestApp";
+import MockTestLanding from "@/components/mock-test/MockTestLanding";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://padaepartner.com";
 
@@ -17,18 +18,21 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { path: segments } = await params;
 
-  // Test page
+  // Test page (last segment is a test slug)
   if (segments.length >= 2) {
     const test = getMockTestByPath(segments);
     if (test) {
       const title = `${test.title} | Padae Partner`;
-      const description = test.description || "";
+      const description =
+        test.description ||
+        `Free CUET mock test with ${test.questions?.length ?? 0} questions, instant score and detailed solutions.`;
       const canonical = `${siteUrl}/mock-tests/${segments.join("/")}`;
       return {
         title,
         description,
         alternates: { canonical },
         openGraph: { title, description, url: canonical, type: "website" },
+        twitter: { card: "summary", title, description },
       };
     }
   }
@@ -38,10 +42,15 @@ export async function generateMetadata({ params }) {
     const sub = getSubcategory(segments[0], segments[1]);
     if (sub) {
       const title = `${sub.label} Mock Tests | Padae Partner`;
+      const description =
+        sub.description ||
+        `Free CUET ${sub.label} mock tests and question papers with instant score, negative marking and solutions.`;
+      const canonical = `${siteUrl}${sub.href}`;
       return {
         title,
-        description: sub.description || `CUET ${sub.label} practice tests.`,
-        alternates: { canonical: `${siteUrl}${sub.href}` },
+        description,
+        alternates: { canonical },
+        openGraph: { title, description, url: canonical, type: "website" },
       };
     }
   }
@@ -51,10 +60,15 @@ export async function generateMetadata({ params }) {
     const cat = getCategory(segments[0]);
     if (cat) {
       const title = `${cat.label} Mock Tests | Padae Partner`;
+      const description =
+        cat.description ||
+        `Free ${cat.label} mock tests across every subject with timed practice, instant scoring and detailed solutions.`;
+      const canonical = `${siteUrl}${cat.href}`;
       return {
         title,
-        description: cat.description || `CUET ${cat.label} timed mock tests.`,
-        alternates: { canonical: `${siteUrl}${cat.href}` },
+        description,
+        alternates: { canonical },
+        openGraph: { title, description, url: canonical, type: "website" },
       };
     }
   }
@@ -68,6 +82,33 @@ function formatDuration(seconds) {
   if (h > 0) return `${h}h ${m > 0 ? `${m}m` : ""}`.trim();
   if (m > 0) return `${m} min`;
   return `${seconds}s`;
+}
+
+function breadcrumbSchema(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: it.href ? `${siteUrl}${it.href}` : undefined,
+    })),
+  };
+}
+
+function itemListSchema(name, items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.title || it.label,
+      url: `${siteUrl}${it.href}`,
+    })),
+  };
 }
 
 function TestCard({ test }) {
@@ -91,7 +132,7 @@ function TestCard({ test }) {
         </div>
       </div>
       <Link className="mt-start-btn" href={test.href}>
-        Start Test →
+        Open Test →
       </Link>
     </div>
   );
@@ -122,9 +163,10 @@ export default async function MockTestCatchAllPage({ params }) {
 
   // ── 1. Test page (2 or 3 segments, last segment is a test slug) ──
   if (segments.length >= 2) {
-    const test = getMockTestByPath(segments);
-    if (test) {
-      return <MockTestApp test={test} />;
+    const data = getTestPageData(segments);
+    if (data) {
+      const canonical = `${siteUrl}/mock-tests/${segments.join("/")}`;
+      return <MockTestLanding data={data} siteUrl={siteUrl} canonical={canonical} />;
     }
   }
 
@@ -132,8 +174,21 @@ export default async function MockTestCatchAllPage({ params }) {
   if (segments.length === 2) {
     const sub = getSubcategory(segments[0], segments[1]);
     if (sub) {
+      const crumbs = [
+        { name: "Mock Tests", href: "/mock-tests" },
+        { name: sub.categoryLabel, href: `/mock-tests/${sub.categorySlug}` },
+        { name: sub.label, href: sub.href },
+      ];
+      const schema = [breadcrumbSchema(crumbs)];
+      if (sub.tests.length) {
+        schema.push(itemListSchema(`${sub.label} Mock Tests`, sub.tests));
+      }
       return (
         <main className="mt-listing-page">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
           <div className="mt-breadcrumb">
             <Link href="/mock-tests">Mock Tests</Link>
             <span>›</span>
@@ -142,7 +197,7 @@ export default async function MockTestCatchAllPage({ params }) {
             <span>{sub.label}</span>
           </div>
           <div className="mt-listing-heading">
-            <h1>{sub.label}</h1>
+            <h1>{sub.label} Mock Tests</h1>
             {sub.description && <p>{sub.description}</p>}
           </div>
           {sub.tests.length === 0 ? (
@@ -165,9 +220,23 @@ export default async function MockTestCatchAllPage({ params }) {
     if (cat) {
       const hasSubcategories = cat.subcategories.length > 0;
       const hasDirectTests = cat.tests.length > 0;
+      const crumbs = [
+        { name: "Mock Tests", href: "/mock-tests" },
+        { name: cat.label, href: cat.href },
+      ];
+      const schema = [breadcrumbSchema(crumbs)];
+      if (hasSubcategories) {
+        schema.push(itemListSchema(`${cat.label} Subjects`, cat.subcategories));
+      } else if (hasDirectTests) {
+        schema.push(itemListSchema(`${cat.label} Mock Tests`, cat.tests));
+      }
 
       return (
         <main className="mt-listing-page">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
           <div className="mt-breadcrumb">
             <Link href="/mock-tests">Mock Tests</Link>
             <span>›</span>
