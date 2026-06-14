@@ -52,15 +52,23 @@
     },
     {
       "type": "table",
-      "headers": [
-        "Month",
-        "Primary Focus",
-        "Target Outcome"
-      ],
+      "headers": ["Month", "Primary Focus", "Target Outcome"],
       "rows": [
-        ["June - August 2026", "NCERT Foundation Building", "Complete 40% syllabus"],
-        ["September - October 2026", "Concept Strengthening", "Complete 70% syllabus"],
-        ["November - December 2026", "Advanced Practice", "Complete 100% syllabus"],
+        [
+          "June - August 2026",
+          "NCERT Foundation Building",
+          "Complete 40% syllabus"
+        ],
+        [
+          "September - October 2026",
+          "Concept Strengthening",
+          "Complete 70% syllabus"
+        ],
+        [
+          "November - December 2026",
+          "Advanced Practice",
+          "Complete 100% syllabus"
+        ],
         ["January - February 2027", "Boards + Revision", "Improve retention"],
         ["March - April 2027", "Mock Tests", "Increase score and speed"],
         ["May 2027", "Final Revision", "Peak exam readiness"]
@@ -130,10 +138,7 @@
     },
     {
       "type": "table",
-      "headers": [
-        "Activity",
-        "Duration"
-      ],
+      "headers": ["Activity", "Duration"],
       "rows": [
         ["School/Board Studies", "4-5 Hours"],
         ["CUET Domain Subjects", "2 Hours"],
