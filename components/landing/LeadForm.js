@@ -3,6 +3,7 @@ import { useId, useRef, useState } from "react";
 import { RecaptchaVerifier, signInWithPhoneNumber, signOut } from "firebase/auth";
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { auth, db, initAnalytics } from "@/lib/firebase";
+import { trackLeadFormSubmit, trackNumberVerified } from "@/lib/gtag";
 import OfferTimer from "./OfferTimer";
 
 function normalizePhoneNumber(value) {
@@ -124,6 +125,9 @@ export default function LeadForm({
         });
         leadId = leadRef.id;
         setPendingLeadId(leadId);
+        // Google Ads: count a conversion only on the first submit (new lead),
+        // not on OTP resends which take the updateDoc branch above.
+        trackLeadFormSubmit();
       }
 
       const result = await signInWithPhoneNumber(auth, leadPayload.mobile, getRecaptchaVerifier());
@@ -165,6 +169,9 @@ export default function LeadForm({
       });
 
       await signOut(auth);
+
+      // Google Ads: count a conversion when the phone number is verified.
+      trackNumberVerified();
 
       formRef.current?.reset();
       setOtp("");
