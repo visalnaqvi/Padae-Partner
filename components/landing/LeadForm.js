@@ -4,6 +4,7 @@ import { RecaptchaVerifier, signInWithPhoneNumber, signOut } from "firebase/auth
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { auth, db, initAnalytics } from "@/lib/firebase";
 import { trackLeadFormSubmit, trackNumberVerified } from "@/lib/gtag";
+import { getStoredGclid } from "@/lib/gclid";
 import OfferTimer from "./OfferTimer";
 
 function normalizePhoneNumber(value) {
@@ -35,6 +36,7 @@ export default function LeadForm({
   cta = "Book Your Seat Now",
   compact = false,
   showOffer = true,
+  onComplete,
 }) {
   const formId = useId();
   const safeFormId = formId.replace(/[^a-zA-Z0-9_-]/g, "");
@@ -74,7 +76,6 @@ export default function LeadForm({
   }
 
   function getLeadPayload(formData) {
-    const searchParams = new URLSearchParams(window.location.search);
     const enteredMobile = String(formData.get("mobile") || "");
     const normalizedMobile = normalizePhoneNumber(enteredMobile);
 
@@ -84,7 +85,9 @@ export default function LeadForm({
       mobileEntered: enteredMobile,
       class: formData.get("class"),
       targetCourse: formData.get("targetCourse"),
-      gclid: searchParams.get("gclid") || null,
+      // Persisted click id, so leads who navigated past the ad landing URL still
+      // carry their gclid for offline conversion matching.
+      gclid: getStoredGclid(),
       formTitle: title,
       formCta: cta,
       pagePath: window.location.pathname,
@@ -179,6 +182,12 @@ export default function LeadForm({
       setPendingLeadId("");
       setPendingPhone("");
       setSubmitted(true);
+
+      // Run any post-verification action (e.g. open WhatsApp / dial) supplied by
+      // the caller, now that the booking + verify conversions have fired.
+      if (typeof onComplete === "function") {
+        onComplete();
+      }
     } catch (error) {
       setSubmitError("The OTP did not match. Please check it and try again.");
       console.error("Lead form OTP verification failed:", error);

@@ -4,6 +4,7 @@ import "antd/dist/reset.css";
 import "./globals.css";
 import AntdProvider from "@/components/AntdProvider";
 import NavMenu from "@/components/NavMenu";
+import GclidCapture from "@/components/GclidCapture";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://padaepartner.com";
 
@@ -99,6 +100,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <GclidCapture />
         <AntdProvider>
           <NavMenu />
           {children}

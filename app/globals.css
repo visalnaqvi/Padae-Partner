@@ -3604,20 +3604,21 @@ body:has(.cuet-landing) .footer {
   z-index: 50;
 }
 
-.lp-sticky-contact a {
+.lp-sticky-contact a,
+.lp-sticky-contact button {
   align-items: center;
+  border: 0;
   border-radius: 8px;
   box-shadow: 0 14px 34px #10212b2b;
+  cursor: pointer;
   display: inline-flex;
+  font-family: inherit;
   font-size: 22px;
   font-weight: 950;
   justify-content: center;
   min-height: 46px;
-  padding: 12px 14px;
-}
-
-.lp-sticky-contact a {
   min-width: 46px;
+  padding: 12px 14px;
 }
 
 .lp-sticky-whatsapp {
@@ -3629,6 +3630,48 @@ body:has(.cuet-landing) .footer {
   background: #ffffff;
   border: 1px solid var(--lp-line);
   color: var(--lp-deep);
+}
+
+/* CONTACT MODAL: lead form popup gating WhatsApp / call actions. */
+.lp-modal-overlay {
+  align-items: center;
+  background: rgba(16, 33, 43, 0.55);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 16px;
+  position: fixed;
+  z-index: 100;
+}
+
+.lp-modal {
+  max-height: 92vh;
+  max-width: 460px;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.lp-modal .lp-lead-form {
+  margin: 0;
+}
+
+.lp-modal-close {
+  background: #ffffff;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px #10212b2b;
+  color: var(--lp-deep);
+  cursor: pointer;
+  font-size: 20px;
+  height: 32px;
+  line-height: 1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 32px;
+  z-index: 1;
 }
 
 /* BREADCRUMB: Internal-linking nav on sub-pages. */
